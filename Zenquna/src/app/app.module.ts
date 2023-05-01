@@ -3,14 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NewsComponent } from './news/news.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
 import { HomeComponent } from './components/home/home.component';
-import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 
@@ -23,7 +24,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { SidevarComponent } from './components/sidevar/sidevar.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, FooterComponent, HeaderComponent, SidevarComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    FooterComponent,
+    HeaderComponent,
+    SidevarComponent,
+    NewsComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -38,7 +46,9 @@ import { SidevarComponent } from './components/sidevar/sidevar.component';
     MatListModule,
     CommonModule,
     MatRadioModule,
-    // MatCarouselModule.forRoot(),
+    MatCardModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],
