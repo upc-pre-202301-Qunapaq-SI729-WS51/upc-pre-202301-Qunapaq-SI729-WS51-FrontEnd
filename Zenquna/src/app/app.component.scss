@@ -1,0 +1,6 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    min-height: 100%; /* asegura que la página ocupe todo el alto de la ventana */
+  }

@@ -1,0 +1,35 @@
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f0fb;
+}
+
+.logo {
+  height: 60px;
+  width: 70px;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+
+.toolbar-container {
+  display: flex;
+  align-items: center;
+  background-color: #f8f0fb;
+}
+
+.icon {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.avatar-container {
+  margin-left: 20px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
