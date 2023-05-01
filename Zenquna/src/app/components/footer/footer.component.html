@@ -1,0 +1,62 @@
+<footer>
+  <div class="footer-wrapper">
+    <div class="column">
+      <div class="icon-container">
+        <img src="../../../assets/peru.png" alt="Bandera de Perú" />
+        <span class="text">Perú</span>
+      </div>
+    </div>
+    <div class="column">
+      <div class="icon-container">
+        <mat-icon>language</mat-icon>
+        <span class="text">Español</span>
+      </div>
+    </div>
+    <div class="column">
+      <div class="icon-container">
+        <mat-icon>policy</mat-icon>
+        <span class="text">Politicas</span>
+        <mat-menu #politicasMenu="matMenu">
+          <button mat-menu-item>Politicas de privacidad</button>
+          <button mat-menu-item>Politicas de cookies</button>
+          <button mat-menu-item>Terminos y condiciones</button>
+          <button mat-menu-item>Legal</button>
+        </mat-menu>
+        <button mat-icon-button [matMenuTriggerFor]="politicasMenu">
+          <mat-icon>arrow_drop_down</mat-icon>
+        </button>
+      </div>
+    </div>
+    <div class="column">
+      <div class="icon-container">
+        <mat-icon>share</mat-icon>
+        <span class="text">Redes sociales</span>
+      </div>
+      <div class="social-links">
+        <div class="icon-container">
+          <a href="#">
+            <mat-icon>instagram</mat-icon>
+          </a>
+        </div>
+        <div class="icon-container">
+          <a href="#">
+            <mat-icon>facebook</mat-icon>
+          </a>
+        </div>
+        <div class="icon-container">
+          <a href="#">
+            <mat-icon>twitter</mat-icon>
+          </a>
+        </div>
+        <div class="icon-container">
+          <a href="#">
+            <mat-icon>youtube</mat-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copy-container">
+    <span>&copy; 2023 Qunapaq. Todos los derechos reservados.</span>
+  </div>
+</footer>

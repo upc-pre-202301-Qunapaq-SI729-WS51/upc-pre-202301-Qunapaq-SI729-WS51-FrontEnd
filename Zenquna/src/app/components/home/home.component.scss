@@ -1,0 +1,214 @@
+// mat-toolbar {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+
+// .logo {
+//   height: 50px;
+//   margin-left: 10px;
+// }
+
+// .toolbar-container {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .icon {
+//   margin-right: 10px;
+//   cursor: pointer;
+// }
+
+// .avatar-container {
+//   margin-left: 20px;
+// }
+
+// .avatar {
+//   width: 40px;
+//   height: 40px;
+//   border-radius: 50%;
+//   cursor: pointer;
+// }
+
+.sidenav {
+  width: 200px;
+  background-color: #f8f0fb;
+}
+
+mat-nav-list {
+  padding: 0 20px 20px 20px;
+  margin-top: 20px;
+  // border-color: #456990;
+}
+
+a {
+  border: 1px solid white;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.premium-button {
+  margin: auto;
+  display: block;
+  background-color: #63ceff;
+  color: #fff;
+  width: 80%;
+  margin-top: 20px;
+}
+
+.main-container {
+  display: flex;
+  height: calc(100vh - 100px);
+  min-height: 900px;
+  background-color: #f8f0fb;
+}
+
+.content-container {
+  flex: 1;
+  padding: 20px;
+  max-width: 100%; /* Ajustamos el ancho máximo */
+  min-height: 100%;
+  margin: 0 auto; /* Centramos horizontalmente */
+  box-sizing: border-box;
+}
+
+.trend-container {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.trend-slide {
+  position: relative;
+  height: 200px;
+  background-color: #f8f0fb;
+  border-radius: 10px;
+}
+
+.trend-slide-image {
+  height: 20%;
+  background-image: url("../../../assets/peru.png");
+  background-size: cover;
+  border-radius: 10px;
+}
+.trend-carousel {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+mat-grid-tile {
+  width: calc(30%);
+  height: 200px;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.trend-slide-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  padding: 10px;
+  background-color: #f8f0fb;
+  color: #fff;
+  border-radius: 0 0 10px 10px;
+}
+
+.trend-slide-text h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.trend-slide-text p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.explore-container {
+  margin-bottom: 100px;
+}
+
+.campaign-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 10px; /* Agregamos un margen negativo a los lados */
+}
+
+.campaign-card {
+  width: calc(30% - 30px); /* Cambiamos el ancho fijo a un porcentaje */
+  margin-bottom: 20px;
+  margin-left: 10px; /* Agregamos un margen a la izquierda */
+  margin-right: 10px; /* Agregamos un margen a la derecha */
+}
+
+.campaign-card img {
+  height: 200px;
+  border-radius: 10px;
+}
+
+.campaign-card-content {
+  padding: 10px;
+}
+
+.campaign-card-content h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.campaign-card-content p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.campaign-card-content button {
+  margin-top: 10px;
+  width: 100%;
+}
+.carousel-container {
+  width: 70vw;
+  height: 80vh;
+  margin: 16px auto;
+}
+
+@media (max-width: 1200px) {
+  // .explore-container {
+  //   flex-direction: column;
+  //   align-items: center;
+  // }
+
+  .campaign-card {
+    // width: 100%; /* Ajustamos el ancho */
+    margin-bottom: 20px;
+    height: 360px; /* Ajustamos la altura */
+    width: calc(30% + 200px); /* Ajustamos el ancho */
+  }
+  .campaign-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  .content-container {
+    padding: 0 0; /* Quitamos el padding horizontal */
+    //adjust the height when the screen is small
+    height: calc(100vh + 200px);
+  }
+  .main-container {
+    height: calc(100vh + 700px);
+  }
+}
