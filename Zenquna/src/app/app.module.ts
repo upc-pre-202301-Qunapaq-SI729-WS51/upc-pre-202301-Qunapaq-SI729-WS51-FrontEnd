@@ -20,9 +20,10 @@ import { MatRadioModule } from '@angular/material/radio';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
+import { SidevarComponent } from './components/sidevar/sidevar.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, FooterComponent, HeaderComponent],
+  declarations: [AppComponent, HomeComponent, FooterComponent, HeaderComponent, SidevarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
