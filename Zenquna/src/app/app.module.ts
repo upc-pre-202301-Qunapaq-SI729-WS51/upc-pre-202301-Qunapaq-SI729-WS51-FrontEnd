@@ -17,19 +17,27 @@ import { MatListModule } from '@angular/material/list';
 //Para campaign
 import { MatProgressBarModule} from '@angular/material/progress-bar';
 import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { MatRadioModule } from '@angular/material/radio';
 
 import { CampaignComponent } from './components/campaign/campaign.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { SidevarComponent } from './components/sidevar/sidevar.component';
+import { PaymentComponent } from './components/dialogs/payment/payment.component';
+import { VisaComponent } from './components/dialogs/visa/visa.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CampaignComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    SidevarComponent,
+    PaymentComponent,
+    VisaComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +55,9 @@ import { HeaderComponent } from './components/header/header.component';
     MatRadioModule,
     //campaign
     MatProgressBarModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

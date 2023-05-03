@@ -1,6 +1,17 @@
 .page-container {
-    display: flex;
-    flex-direction: column;
-    min-width: 100%;
-    min-height: 100%; /* asegura que la página ocupe todo el alto de la ventana */
-  }
+  display: flex;
+  background-color: #f8f0fb;
+}
+
+.content-container {
+  flex: 1;
+}
+
+.app-sidevar {
+  width: 200px;
+}
+
+.app-home {
+  margin-left: 20px;
+  flex: 1;
+}
