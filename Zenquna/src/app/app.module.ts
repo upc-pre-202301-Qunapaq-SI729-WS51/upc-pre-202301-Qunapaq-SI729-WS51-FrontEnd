@@ -26,6 +26,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SidevarComponent } from './components/sidevar/sidevar.component';
 import { PaymentComponent } from './components/dialogs/payment/payment.component';
 import { VisaComponent } from './components/dialogs/visa/visa.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { VisaComponent } from './components/dialogs/visa/visa.component';
     MatInputModule,
     FormsModule,
     MatDialogModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -2,25 +2,24 @@
   <!--Header de la noticia-->
   <div class="content-container">
     <mat-card class="title-card-container">
-      <img src="../../../assets/v-img.png" alt="Niña comiendo pan" />
+      <img [src]="campaign?.imageMini" [alt]="campaign.name" />
       <mat-card-content>
-        <p class="title-text">Alimenta familias en Palestina</p>
+        <p class="title-text">{{ campaign?.name }}</p>
         <p></p>
         <p class="subtitle-text">
           <!--Las donaciones hasta ahora-->
-        </p>
-
-        <div>
           <mat-icon>attach_money</mat-icon>
-          1.500.000 coins
+          {{ campaign?.goal }} PEN
           <span class="example-spacer"></span>
           <mat-icon>person</mat-icon>
-          49.162 donantes
-        </div>
-        <!--Barra de progreso-->
+          {{ campaign?.donors?.length }} donadores
+        </p>
+
         <div class="progress-bar-container">
-          <mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
-          50%
+          <!-- <div
+            class="progress-bar"
+            [style.width.%]="(campaign?.collected / campaign?.goal) * 100"
+          ></div> -->
         </div>
         <p></p
       ></mat-card-content>
@@ -28,52 +27,37 @@
     <!--Descripción de la noticia-->
     <mat-card class="summary-card-container">
       <mat-card-content>
-        <p class="title-text">Resumen</p>
+        <p class="title-text">{{ campaign?.name }}</p>
         <p></p>
         <p class="main-text">
-          Las comidas compartidas proporcionarán a las familias de Palestina un
-          apoyo en efectivo para que puedan comprar alimentos en tiendas
-          locales.
+          {{ campaign?.summary }}
         </p>
         <p class="normal-text">
-          Dos tercios de la población de Gaza —alrededor de 1.3 millones de
-          personas— no pueden alimentar a sus familias debido a décadas de
-          conflicto. Los disturbios políticos en la Franja de Gaza y los
-          bloqueos continuos en el mar, la tierra y el aire a lo largo de
-          Cisjordania dejan a la región dependiente de las importaciones. Esto
-          significa que Palestina es muy vulnerable a las crisis globales y al
-          aumento de los precios de los alimentos. Como uno de sus mayores
-          importadores de harina de trigo y aceite, la guerra en Ucrania ha
-          llevado al aumento de los precios de los alimentos en Palestina - un
-          3.7% de aumento en un año.
-        </p>
-        <p class="normal-text">
-          El Programa Mundial de Alimentos está sobre el terreno proporcionando
-          apoyo en efectivo a 300.000 palestinos vulnerables cada mes. La
-          cuestión en Palestina no es la falta de alimentos, sino que la gente
-          no puede permitirse comprarla. Es por eso que el WFP ofrece asistencia
-          en efectivo para que las familias puedan obtener los alimentos que
-          necesitan mientras impulsan la economía local. Pueden gastar su dinero
-          en más de 300 tiendas designadas en Cisjordania y Gaza. El WFP
-          prioriza a las familias encabezadas por mujeres, a las personas con
-          discapacidad y a las personas mayores con apoyo.
+          {{ campaign?.description }}
         </p>
       </mat-card-content>
-      <img
-        src="../../../assets/Carousel.png"
-        alt="Grupo de niños en una mesa alcanzando comida"
-      />
+      <img [src]="campaign?.imageMini" [alt]="campaign.name" />
     </mat-card>
   </div>
   <!--Yey, tarjeta-->
   <mat-card class="donate-card-container">
-    <div class="title-text">Dona</div>
+    <p>Donar</p>
+    <div class="donation-amount">{{ updateDonationText() }}</div>
     <form class="form-container">
+      <div class="donation-buttons">
+        <button mat-raised-button (click)="donation = 5">5</button>
+        <button mat-raised-button (click)="donation = 10">10</button>
+        <button mat-raised-button (click)="donation = 15">15</button>
+        <button mat-raised-button (click)="donation = 20">20</button>
+      </div>
       <mat-form-field>
-        <mat-label>Monto a donar</mat-label>
-        <input matInput [(ngModel)]="donation" />
-        <mat-icon matSuffix>attach_money</mat-icon>
+        <mat-label>Monto a donar</mat-label
+        ><input matInput [(ngModel)]="donation" min="20" type="number" />
       </mat-form-field>
+
+      <!-- <button mat-button class="donate-button" (click)="openPayment()">
+        Continuar
+      </button> -->
     </form>
     <button mat-button class="donate-button" (click)="openPayment()">
       Continuar

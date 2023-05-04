@@ -1,0 +1,95 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "campaignId": 3,
+      "date": "2023-05-01T00:00:00",
+      "description": "Las intensas lluvias registradas en la costa norte y central del Perú, ocasionadas por el ciclón Yaku, han dejado hasta el momento más de 12 mil damnificados de acuerdo con el Instituto Nacional de Defensa Civil. Conoce aquí los diferentes puntos de acopio de donaciones en Lima y provincias.",
+      "image": "https://portal.andina.pe/EDPfotografia3/Thumbnail/2023/03/16/000941884W.jpg",
+      "title": "Puntos de acopio de donaciones para damnificados por lluvias en Lima y provincias"
+    },
+    {
+      "id": 2,
+      "campaignId": 1,
+      "date": "2023-05-02T00:00:00",
+      "description": "Gracias a su apoyo, ya hemos logrado recaudar más de 200 soles. Con este dinero hemos podido comprar alimentos para los vecinos de la zona. Gracias por su apoyo.",
+      "image": "../../../assets/news1.png",
+      "title": "Primeros platos con su apoyo"
+    },
+    {
+      "id": 3,
+      "campaignId": 3,
+      "date": "2023-05-03T00:00:00",
+      "description": "Distintos municipios, empresas y ciudadanos de todo el Perú se vienen uniendo para juntar toda la ayuda posible para los más necesitados por las fuertes lluvias del ciclón Yaku.",
+      "image": "https://www.infobae.com/new-resizer/HkQ_eHK-146XHeuAopdqd_mGtNg=/992x558/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/6IG5D2Q2MFHALBMQMMKSJ2O7CM.jpg",
+      "title": "Perú se une para ayudar a los damnificados por las lluvias"
+    }
+  ],
+  "campaigns": [
+    {
+      "id": 1,
+      "category": ["Alimentacion", "Bajos recursos", "Todas las edades"],
+      "department": "Lima",
+      "district": "San Juan de Lurigancho",
+      "name": "Olla comun de Cielo Azul",
+      "summary": "Para que pueda seguir ayudando a los vecinos necesito de tu ayuda",
+      "description": "La olla común de Cielo Azul es una iniciativa que nació con el fin de ayudar a los vecinos de la zona que lo necesitan. Sin embargo, la olla común necesita de tu ayuda para poder seguir ayudando a los vecinos. Con tu ayuda, la olla común podrá seguir ayudando a los vecinos, desde niños hasta señores que lo necesitan.",
+      "imageBanner": "../../../assets/campaign1.png",
+      "imageMini": "../../../assets/campaign1.png",
+      "goal": 5000,
+      "collected": 260,
+      "donors": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38"
+      ],
+      "deadline": "2023-12-31T00:00:00"
+    },
+    {
+      "id": 2,
+      "category": ["Animales"],
+      "department": "Lima",
+      "district": "San Isidro",
+      "name": "Refugio de perros: Santuario Felicidad",
+      "summary": "Ayuda a los perros que lo necesitan",
+      "description": "El refugio de perros Santuario Felicidad es una organización sin fines de lucro que brinda cuidado y protección a perros en situación de abandono. Actualmente, necesitan ayuda para conseguir alimentos para los perros. Con tu apoyo, el refugio podrá seguir brindando cuidado y protección a los perros que lo necesitan.",
+      "imageBanner": "../../../assets/campaign2.png",
+      "imageMini": "../../../assets/campaign2.png",
+      "goal": 5000,
+      "collected": 1230,
+      "donors": ["6", "7", "8", "9", "10", "11", "12", "13", "14", "15"],
+      "deadline": "2023-12-31T00:00:00"
+    },
+    {
+      "id": 3,
+      "category": ["Ayuda humanitaria", "Emergencia", "Todas las edades"],
+      "department": "La Libertad",
+      "district": "Trujillo",
+      "name": "Centro poblado: El Milagro",
+      "summary": "Ayuda a los afectados por las lluvias",
+      "description": "El centro poblado El Milagro se encuentra en una zona que ha sido afectada por las lluvias. Muchas familias han perdido sus hogares y necesitan ayuda. Con tu apoyo, podremos brindar ayuda a estas familias y contribuir a la recuperación de la zona.",
+      "imageBanner": "../../../assets/campaign3.png",
+      "imageMini": "../../../assets/campaign3.png",
+      "goal": 15000,
+      "collected": 2760,
+      "donors": ["16", "17", "18", "19", "20", "21", "22", "23", "24", "25"],
+      "deadline": "2021-12-31T00:00:00"
+    }
+  ],
+  "comments": []
+}

@@ -1,11 +1,17 @@
 .main-container {
   display: flex;
-  height: calc(100vh + 360px);
+  height: calc(100%);
   background-color: #f8f0fb;
+  padding: 40px 20px;
 }
 mat-form-field {
   // max-width: 100%;
   width: calc(100% + 40px);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .form-container {
@@ -81,6 +87,23 @@ mat-form-field {
   .form-container {
     max-width: 60%;
     margin-left: 10%;
+  }
+}
+
+.donation-buttons {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  button {
+    color: white;
+    font-weight: bold;
+    background-color: #63ceff;
   }
 }
 

@@ -1,90 +1,28 @@
-<!-- <mat-toolbar color="primary">
-  <img src="assets/logo.png" alt="Logo" class="logo" />
-  <div class="toolbar-container">
-    <mat-icon class="icon">search</mat-icon>
-    <mat-icon class="icon">notifications</mat-icon>
-    <div class="avatar-container">
-      <img
-        src="assets/peru.png"
-        alt="Avatar"
-        class="avatar"
-        mat-menu-trigger="menu"
-      />
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>Editar perfil</button>
-        <button mat-menu-item>Cerrar sesión</button>
-      </mat-menu>
-    </div>
-  </div>
-</mat-toolbar> -->
-
 <div class="main-container">
-  <!-- <mat-sidenav mode="side" opened class="sidenav">
-    <mat-nav-list>
-      <a mat-list-item routerLink="/explore">Explorar</a>
-      <a mat-list-item routerLink="/news">Noticias</a>
-      <a mat-list-item routerLink="/campaigns">Campañas</a>
-    </mat-nav-list>
-    <button mat-button class="premium-button">Volverse Premium</button>
-  </mat-sidenav> -->
-
   <div class="content-container">
-    <!-- <div class="trend-container">
-      <h2>Tendencia</h2>
-    </div> -->
     <div class="trend-container">
       <h2>Tendencia</h2>
-      <!-- <mat-grid-list
-        cols="3"
-        rowHeight="200px"
-        class="trend-carousel"
-        (scroll)="onScroll($event)"
-      >
-        <mat-grid-tile
-          *ngFor="let trend of trends"
-          [style.backgroundImage]="'url(' + trend.imageUrl + ')'"
-        >
-          <h3>{{ trend.title }}</h3>
-        </mat-grid-tile>
-      </mat-grid-list> -->
+      <p>Carrousel Work in progress</p>
     </div>
     <div class="explore-container">
       <h2>Más campañas</h2>
       <div class="campaign-card-container">
-        <mat-card class="campaign-card">
+        <mat-card class="campaign-card" *ngFor="let campaign of campaigns">
           <img
             mat-card-image
-            src="../../../assets/campaign1.png"
-            alt="Apoyar a las Ollas comunes"
+            [src]="campaign.imageMini"
+            [alt]="campaign.name"
           />
           <mat-card-content>
-            <h3 mat-card-title>Olla Comun de Cielo Azul</h3>
-            <p mat-card-subtitle>Ayudar para que consigan vívires</p>
-            <button mat-raised-button color="accent">Ver ahora</button>
-          </mat-card-content>
-        </mat-card>
-        <mat-card class="campaign-card">
-          <img
-            mat-card-image
-            src="../../../assets/campaign2.png"
-            alt="Apoyar a un refugio de perros"
-          />
-          <mat-card-content>
-            <h3 mat-card-title>Refugio de perros: Santuario Felicidad</h3>
-            <p mat-card-subtitle>Apoya a conseguirles alimentos</p>
-            <button mat-raised-button color="accent">Ver ahora</button>
-          </mat-card-content>
-        </mat-card>
-        <mat-card class="campaign-card">
-          <img
-            mat-card-image
-            src="../../../assets/campaign3.png"
-            alt="Apoyar a damnificados por lluvias"
-          />
-          <mat-card-content>
-            <h3 mat-card-title>Centro poblado: El Milagro</h3>
-            <p mat-card-subtitle>Ayuda a los afectados por las lluvias</p>
-            <button mat-raised-button color="accent">Ver ahora</button>
+            <h3 mat-card-title>{{ campaign.name }}</h3>
+            <p mat-card-subtitle>{{ campaign.summary }}</p>
+            <button
+              mat-raised-button
+              color="accent"
+              routerLink="/campaign/{{ campaign.id }}"
+            >
+              Ver ahora
+            </button>
           </mat-card-content>
         </mat-card>
       </div>
