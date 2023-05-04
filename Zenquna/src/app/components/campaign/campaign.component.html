@@ -1,0 +1,66 @@
+<div class="main-container">
+  <!--Header de la noticia-->
+  <div class="content-container">
+    <mat-card class="title-card-container">
+      <img [src]="campaign?.imageMini" [alt]="campaign.name" />
+      <mat-card-content>
+        <p class="title-text">{{ campaign?.name }}</p>
+        <p></p>
+        <p class="subtitle-text">
+          <!--Las donaciones hasta ahora-->
+          <mat-icon>attach_money</mat-icon>
+          {{ campaign?.goal }} PEN
+          <span class="example-spacer"></span>
+          <mat-icon>person</mat-icon>
+          {{ campaign?.donors?.length }} donadores
+        </p>
+
+        <div class="progress-bar-container">
+          <!-- <div
+            class="progress-bar"
+            [style.width.%]="(campaign?.collected / campaign?.goal) * 100"
+          ></div> -->
+        </div>
+        <p></p
+      ></mat-card-content>
+    </mat-card>
+    <!--Descripción de la noticia-->
+    <mat-card class="summary-card-container">
+      <mat-card-content>
+        <p class="title-text">{{ campaign?.name }}</p>
+        <p></p>
+        <p class="main-text">
+          {{ campaign?.summary }}
+        </p>
+        <p class="normal-text">
+          {{ campaign?.description }}
+        </p>
+      </mat-card-content>
+      <img [src]="campaign?.imageMini" [alt]="campaign.name" />
+    </mat-card>
+  </div>
+  <!--Yey, tarjeta-->
+  <mat-card class="donate-card-container">
+    <p>Donar</p>
+    <div class="donation-amount">{{ updateDonationText() }}</div>
+    <form class="form-container">
+      <div class="donation-buttons">
+        <button mat-raised-button (click)="donation = 5">5</button>
+        <button mat-raised-button (click)="donation = 10">10</button>
+        <button mat-raised-button (click)="donation = 15">15</button>
+        <button mat-raised-button (click)="donation = 20">20</button>
+      </div>
+      <mat-form-field>
+        <mat-label>Monto a donar</mat-label
+        ><input matInput [(ngModel)]="donation" min="20" type="number" />
+      </mat-form-field>
+
+      <!-- <button mat-button class="donate-button" (click)="openPayment()">
+        Continuar
+      </button> -->
+    </form>
+    <button mat-button class="donate-button" (click)="openPayment()">
+      Continuar
+    </button>
+  </mat-card>
+</div>

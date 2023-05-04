@@ -1,6 +1,15 @@
 <header>
   <mat-toolbar>
-    <a mat-list-item routerLink="/home" style="cursor:pointer"><img src="assets/logo.png" alt="Logo" class="logo" /></a>    
+    <div class="home_linker">
+      <img
+        src="assets/logo.png"
+        alt="Logo"
+        class="logo"
+        routerLink="/home"
+        style="cursor: pointer"
+      />
+      <a class="button_home" routerLink="/home" mat-button>Inicio</a>
+    </div>
     <div class="toolbar-container">
       <mat-icon class="icon">search</mat-icon>
       <mat-icon class="icon">notifications</mat-icon>

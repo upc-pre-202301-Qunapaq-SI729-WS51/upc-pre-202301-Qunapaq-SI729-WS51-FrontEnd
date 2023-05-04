@@ -1,0 +1,149 @@
+.main-container {
+  display: flex;
+  height: calc(100%);
+  background-color: #f8f0fb;
+  padding: 40px 20px;
+}
+mat-form-field {
+  // max-width: 100%;
+  width: calc(100% + 40px);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.form-container {
+  // padding: 0 20px;
+  height: calc(10vh + 20px);
+  align-items: center;
+}
+
+.title-card-container {
+  max-width: 50%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  .title-text {
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+  }
+
+  .subtitle-text {
+    text-align: center;
+    font-weight: light;
+    color: gray;
+  }
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .progress-bar-container {
+    margin: 10px;
+  }
+}
+
+.summary-card-container {
+  max-width: 70%;
+  margin: 0 auto;
+
+  .title-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+  }
+
+  .main-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .normal-text {
+    text-align: center;
+    font-weight: normal;
+    font-size: 14px;
+  }
+}
+
+.donate-card-container {
+  width: 90%;
+  height: calc(20%);
+  margin-right: 2%;
+  margin-bottom: 40px;
+
+  .title-text {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+  }
+
+  .form-container {
+    max-width: 60%;
+    margin-left: 10%;
+  }
+}
+
+.donation-buttons {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  button {
+    color: white;
+    font-weight: bold;
+    background-color: #63ceff;
+  }
+}
+
+.donate-button {
+  margin: auto;
+  display: block;
+  background-color: #456990;
+  color: #fff;
+  font-weight: bold;
+  width: 60%;
+  margin-top: 20px;
+}
+
+@media (max-width: 1000px) {
+  .main-container {
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-container {
+    max-width: 100%;
+    width: 90%;
+  }
+
+  .donate-card-container {
+    order: 1;
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 90%;
+    height: auto;
+    button {
+      height: 60px;
+    }
+  }
+
+  .summary-card-container {
+    order: 2;
+    margin-top: 20px;
+    max-width: 100%;
+  }
+}
