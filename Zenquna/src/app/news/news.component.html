@@ -1,0 +1,40 @@
+<div class="newsTotalContainer">
+    <div class="publicationsContainer">
+        <mat-card class="publicationCard" *ngFor="let post of posts; index as i">
+            <mat-card-header>
+                <img class="avatar" src="{{post.avatar}}">
+                <div class="postinfo">
+                    <div class="userPost">{{post.user}}</div>
+                    <div class="datePost">{{post.fecha.toDateString()}}</div>
+                </div>
+            </mat-card-header>
+            <mat-card-content class="postTextContainer">
+                <div>{{post.text}}</div>
+                <div class="linkPost"><a href="{{post.link}}" target=”_blank”>
+                    {{post.link}}</a></div>                
+            </mat-card-content>
+            <img mat-card-image src="{{post.img}}">
+            <mat-card-actions class="actions-posts">
+                <button mat-button>Comentar</button>
+                <button mat-button>Compartir</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    <div class="lastnewsContainer">
+        <div class="containerTitle">Ultimas campañas</div>
+        <div class="latestNewsContainer">
+            <mat-card *ngFor="let news of latestNews; index as i">
+                <img mat-card-image src="{{news.img}}">
+                <mat-card-header>
+                    <div class="titleNews">{{news.title}}</div>
+                </mat-card-header>
+                <mat-card-content class="postTextContainer">
+                    <div>{{news.description}}</div>          
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary">DONAR AHORA</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

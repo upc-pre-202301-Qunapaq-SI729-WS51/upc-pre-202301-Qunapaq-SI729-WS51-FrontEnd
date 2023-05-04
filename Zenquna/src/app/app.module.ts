@@ -9,8 +9,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NewsComponent } from './news/news.component';
 import { MatCardModule } from '@angular/material/card';
+import { HomeComponent } from './components/home/home.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 
@@ -21,11 +23,18 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { SidevarComponent } from './components/sidevar/sidevar.component';
-
 @NgModule({
-  declarations: [AppComponent, HomeComponent, FooterComponent, HeaderComponent, SidevarComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    NewsComponent,
+    HeaderComponent,
+    FooterComponent,
+    SidevarComponent,
+  ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -36,9 +45,7 @@ import { SidevarComponent } from './components/sidevar/sidevar.component';
     MatCardModule,
     MatSidenavModule,
     MatListModule,
-    CommonModule,
     MatRadioModule,
-    // MatCarouselModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
