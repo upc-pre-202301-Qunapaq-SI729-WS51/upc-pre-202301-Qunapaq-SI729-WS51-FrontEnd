@@ -1,11 +1,7 @@
 [build]
-  command = "ng build --prod && npm run json-server"
+  command = "npm run build"
   publish = "dist/zenquna"
 
 [dev]
-    command = "ng serve --open"
-
-[[redirects]]
-  from = "/api/*"
-  to = "http://localhost:3000/:splat"
-  status = 200
+  command = "npm run json-server & ng serve"
+  publish = "dist/zenquna"
