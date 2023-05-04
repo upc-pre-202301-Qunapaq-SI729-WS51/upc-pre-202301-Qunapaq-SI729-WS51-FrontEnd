@@ -1,6 +1,6 @@
 [build]
-  command = "ng build --prod && npm run json-server"
-  publish = "dist/Zenquna"
+  command = "ng build --configuration production && npm run json-server"
+  publish = "Zenquna/dist"
 
 [dev]
     command = "ng serve --open"
