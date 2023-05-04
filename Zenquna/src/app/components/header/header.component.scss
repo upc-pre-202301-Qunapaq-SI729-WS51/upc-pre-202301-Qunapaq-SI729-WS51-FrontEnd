@@ -1,42 +1,46 @@
-mat-toolbar {
+.mat-toolbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #f8f0fb;
-}
 
-.logo {
-  height: 60px;
-  width: 70px;
-  margin-left: 10px;
-  border-radius: 50%;
-}
+  .home_linker {
+    display: flex;
+    align-items: center;
+  }
 
-.toolbar-container {
-  display: flex;
-  align-items: center;
-  background-color: #f8f0fb;
-}
+  .button_home {
+    margin-right: 16px;
+    left: 0px;
+    font-weight: bold;
+  }
 
-.icon {
-  margin-right: 10px;
-  cursor: pointer;
-}
+  .logo {
+    height: 60px;
+    width: 70px;
+    margin-left: 10px;
+    border-radius: 50%;
+  }
 
-.avatar-container {
-  margin-left: 20px;
-}
+  .toolbar-container {
+    display: flex;
+    align-items: center;
+    background-color: #f8f0fb;
+  }
 
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-}
+  .icon {
+    margin-right: 10px;
+    cursor: pointer;
+  }
 
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
+  .avatar-container {
+    margin-left: 20px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 }

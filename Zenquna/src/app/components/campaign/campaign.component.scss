@@ -1,77 +1,89 @@
 .main-container {
   display: flex;
-  height: calc(100vh - 100px);
-  min-height: 900px;
+  height: calc(100vh + 360px);
   background-color: #f8f0fb;
 }
+mat-form-field {
+  // max-width: 100%;
+  width: calc(100% + 40px);
+}
 
-/*.content-container {
-  flex: 1;
-  padding: 20px;
-  max-width: 100%; // Ajustamos el ancho máximo
-  min-height: 100%;
-  margin: 0 auto; // Centramos horizontalmente 
-  box-sizing: border-box;
-}*/
+.form-container {
+  // padding: 0 20px;
+  height: calc(10vh + 20px);
+  align-items: center;
+}
 
-.title-card-container{
+.title-card-container {
   max-width: 50%;
-  margin: 0 auto; /* Centramos horizontalmente */
+  margin: 0 auto;
   margin-bottom: 20px;
-  .title-text{
+
+  .title-text {
     margin: 10px;
     text-align: center;
     font-weight: bold;
     font-size: large;
   }
-  .subtitle-text{
+
+  .subtitle-text {
     text-align: center;
     font-weight: light;
     color: gray;
   }
+
   .example-spacer {
     flex: 1 1 auto;
   }
-  .progress-bar-container{
-    margin:10px;
+
+  .progress-bar-container {
+    margin: 10px;
   }
 }
-.summary-card-container{
-  //margin-top: 20px;
+
+.summary-card-container {
   max-width: 70%;
-  margin: 0px auto; /* Centramos horizontalmente */
-  .title-text{
+  margin: 0 auto;
+
+  .title-text {
     text-align: center;
     font-weight: bold;
     font-size: large;
   }
-  .main-text{
+
+  .main-text {
     text-align: center;
     font-weight: bold;
+    font-size: 18px;
   }
-  .normal-text{
+
+  .normal-text {
     text-align: center;
     font-weight: normal;
+    font-size: 14px;
   }
 }
-.donate-card-container{
+
+.donate-card-container {
   width: 90%;
-  height: 25%;
+  height: calc(20%);
   margin-right: 2%;
-  //margin: 0 0 auto; /* Centramos horizontalmente */
-  .title-text{
+  margin-bottom: 40px;
+
+  .title-text {
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
     font-weight: bold;
     font-size: large;
   }
+
   .form-container {
     max-width: 60%;
     margin-left: 10%;
-    //margin: 0 auto; /* Centramos horizontalmente */
   }
 }
+
 .donate-button {
   margin: auto;
   display: block;
@@ -81,16 +93,34 @@
   width: 60%;
   margin-top: 20px;
 }
-/*.title-text{
-  font: Open Sans, sans-serif;
-}*/
 
-@media (max-width: 1200px) {
-  .content-container {
-    padding: 0 0;
-    height: calc(100vh + 200px);
-  }
+@media (max-width: 1000px) {
   .main-container {
-    height: calc(100vh + 700px);
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-container {
+    max-width: 100%;
+    width: 90%;
+  }
+
+  .donate-card-container {
+    order: 1;
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 90%;
+    height: auto;
+    button {
+      height: 60px;
+    }
+  }
+
+  .summary-card-container {
+    order: 2;
+    margin-top: 20px;
+    max-width: 100%;
   }
 }

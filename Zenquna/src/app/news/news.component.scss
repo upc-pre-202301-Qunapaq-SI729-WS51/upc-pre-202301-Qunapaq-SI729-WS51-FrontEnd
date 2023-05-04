@@ -1,59 +1,98 @@
-.newsTotalContainer{
-    display: grid;
-    background-color: #f3f3f3;
-    grid-template-columns: 6fr 2fr;
+.newsTotalContainer {
+  width: calc(100% - 200px);
+  display: grid;
+  background-color: #f8f0fb;
+  grid-template-columns: 6fr 2fr;
+  //   @media (max-width: 1200px) {
+  //     & > .lastnewsContainer {
+  //       order: 1;
+  //       margin-bottom: 20px;
+  //     }
+  //   }
 }
-.publicationsContainer{
+.publicationsContainer {
+  margin: 20px;
+  gap: 8px;
+}
+
+.publicationsContainer {
+  margin: 20px;
+  gap: 8px;
+}
+.publicationCard {
+  max-width: 680px;
+  min-width: 500px;
+  margin-bottom: 8px !important;
+  margin: auto;
+}
+.avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.postinfo {
+  padding-left: 10px;
+}
+.userPost {
+  font-weight: bold;
+  padding-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.datePost {
+  font-size: 1.2rem;
+}
+.postTextContainer {
+  font-size: 1.2rem;
+  padding: 10px 16px;
+}
+.linkPost {
+  padding: 8px 0;
+}
+.actions-posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.lastnewsContainer {
+  max-width: 360px;
+  min-width: 280px;
+  margin: 20px;
+}
+.containerTitle {
+  font-weight: bold;
+  padding-bottom: 10px;
+  font-size: 1.3rem;
+}
+.titleNews {
+  font-weight: bold;
+  padding-bottom: 5px;
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .newsTotalContainer {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .lastnewsContainer {
+    width: 0px;
+    display: none;
+  }
+
+  .publicationsContainer {
     margin: 20px;
     gap: 8px;
-}
-.publicationCard{
-    max-width: 680px;
+  }
+
+  .publicationCard {
+    width: calc(100%);
     min-width: 500px;
-    margin-bottom: 8px!important;
-    margin:auto;
-}
-.avatar{
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-}
-.postinfo{
-    padding-left: 10px;
-}
-.userPost{
-    font-weight: bold;
-    padding-bottom: 10px;
-    font-size: 1.3rem;
+    margin: auto;
+  }
 }
 
-.datePost{
-    font-size: 1.2rem;
-}
-.postTextContainer{
-    font-size: 1.2rem;
-    padding: 10px 16px;
-}
-.linkPost{
-    padding: 8px 0;
-}
-.actions-posts{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.lastnewsContainer{
-    max-width: 360px;
-    min-width: 280px;
-    margin: 20px;
-
-}
-.containerTitle{
-    font-weight: bold;
-    padding-bottom: 10px;
-    font-size: 1.3rem;    
-}
-.titleNews{    
-    font-weight: bold;
-    padding-bottom: 5px;
-    font-size: 1.3rem;
-}
+// @media screen and (max-width: 1200px) {
+//   .lastnewsContainer {
+//     display: none;
+//   }
+// }
