@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/app/environments/environment.prod';
-import { News } from '../models/news.model';
-import { Campaign } from '../models/campaign.model';
+import { environment } from 'environments/environment.prod';
+import { News } from '@models/news.model';
+import { Campaign } from '@models/campaign.model';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
