@@ -11,6 +11,9 @@ export interface PaymentData {
   styleUrls: ['./payment.component.scss']
 })
 export class PaymentComponent {
+  selectedMethod: string="";
+  methods: string[] = ['VISA', 'YAPE', 'PLIN'];
+
   constructor(
     public dialogRef: MatDialogRef<PaymentComponent>,
     @Inject(MAT_DIALOG_DATA) public data: PaymentData, public dialog: MatDialog
@@ -21,10 +24,14 @@ export class PaymentComponent {
     this.dialogRef.close();
   }
 
-  openVisa(): void {
-    //if (this.donation>10) {
-      const dialogRef = this.dialog.open(VisaComponent, {data: {donation: this.data.donation},});
-      this.onExitClick();
-    //}
+  openMethod(): void {
+    switch (this.selectedMethod) {
+      case 'VISA':
+        const dialogRef = this.dialog.open(VisaComponent, {data: {donation: this.data.donation},});
+        this.onExitClick();
+        break;
+      default:
+        break;
+    }
   }
 }

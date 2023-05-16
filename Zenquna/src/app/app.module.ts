@@ -21,13 +21,13 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CampaignComponent } from './components/campaign/campaign.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidevarComponent } from './components/sidevar/sidevar.component';
 import { PaymentComponent } from './components/dialogs/payment/payment.component';
 import { VisaComponent } from './components/dialogs/visa/visa.component';
 import { HttpClientModule } from '@angular/common/http';
-import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [

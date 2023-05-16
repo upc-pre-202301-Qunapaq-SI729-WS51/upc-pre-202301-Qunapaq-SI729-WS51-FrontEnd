@@ -1,15 +1,26 @@
-<h1 mat-dialog-title>
-    Método de pago
+<div mat-dialog-title>
+    <p class="title-text">
+    Seleccione su método de pago:
+    <span class="example-spacer"></span>
     <button mat-button (click)="onExitClick()">
         <mat-icon class="icon">close</mat-icon>
     </button>
-</h1>
-<div mat-dialog-content>
-    Monto a donar: {{data.donation}}
+    </p>
+</div>
+<mat-divider></mat-divider>
+<div mat-dialog-content class="subtitle-text">
+    Monto a donar: {{data.donation}} PEN
 </div>
 <div mat-dialog-actions>
-    <button mat-button  (click)="openVisa()"><img src="../../../assets/VISA.png" class="method-image"></button>
+    <mat-radio-group class="method-selection" [(ngModel)]="selectedMethod">
+  <mat-radio-button class="radio-button main-text" *ngFor="let method of methods" [value]="method" color="primary">
+    <img src="../../../assets/{{method}}.png" class="method-image">
+    {{method}}
+  </mat-radio-button>
+</mat-radio-group>
 </div>
 <div mat-dialog-actions>
-    <!--<button mat-button><img src="../../../assets/YAPE.png" class="method-image"></button>-->
+    <button mat-raised-button class="method-button" (click)="openMethod()">
+      Continuar {{selectedMethod}}
+    </button>
 </div>

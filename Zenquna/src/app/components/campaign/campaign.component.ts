@@ -78,9 +78,10 @@ export class CampaignComponent implements OnInit {
   }
 
   openPayment(): void {
-    this.donation=this.donation;
+    if (this.donation>=5){
     const dialogRef = this.dialog.open(PaymentComponent, {
       data: { donation: this.donation },
     });
+  }
   }
 }
