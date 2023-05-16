@@ -16,10 +16,8 @@
         </p>
 
         <div class="progress-bar-container">
-          <!-- <div
-            class="progress-bar"
-            [style.width.%]="(campaign?.collected / campaign?.goal) * 100"
-          ></div> -->
+          <mat-progress-bar mode="determinate" 
+          [value]="getDonationPercentage()"></mat-progress-bar>
         </div>
         <p></p
       ></mat-card-content>
@@ -41,8 +39,8 @@
   </div>
   <!--Yey, tarjeta-->
   <mat-card class="donate-card-container">
-    <p>Donar</p>
-    <div class="donation-amount">{{ updateDonationText() }}</div>
+    <p class="title-text">Donar</p>
+    <!--<div class="donation-amount">{{ updateDonationText() }}</div>-->
     <form class="form-container">
       <div class="donation-buttons">
         <button mat-raised-button (click)="donation = 5">5</button>
@@ -52,14 +50,11 @@
       </div>
       <mat-form-field>
         <mat-label>Monto a donar</mat-label
-        ><input matInput [(ngModel)]="donation" min="20" type="number" />
+        ><input matInput [(ngModel)]="donation" min="5" type="number" value="{{donation}}"
+        (input)="updateDonationValue($event)" (click)="updateDonationValue($event)"/>
       </mat-form-field>
-
-      <!-- <button mat-button class="donate-button" (click)="openPayment()">
-        Continuar
-      </button> -->
     </form>
-    <button mat-button class="donate-button" (click)="openPayment()">
+    <button mat-raised-button class="donate-button" (click)="openPayment()">
       Continuar
     </button>
   </mat-card>

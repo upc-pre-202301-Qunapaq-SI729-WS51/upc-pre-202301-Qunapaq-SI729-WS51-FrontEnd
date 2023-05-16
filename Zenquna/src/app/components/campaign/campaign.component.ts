@@ -64,6 +64,11 @@ export class CampaignComponent implements OnInit {
     this.updateDonationText();
   }
 
+  getDonationPercentage(){
+    return ((this.campaign.collected) / (this.campaign.goal))*100
+    //(campaign?.collected / campaign?.goal) * 100
+  }
+
   updateDonationText() {
     if (this.donation < 5) {
       return ' ';
@@ -73,6 +78,7 @@ export class CampaignComponent implements OnInit {
   }
 
   openPayment(): void {
+    this.donation=this.donation;
     const dialogRef = this.dialog.open(PaymentComponent, {
       data: { donation: this.donation },
     });
