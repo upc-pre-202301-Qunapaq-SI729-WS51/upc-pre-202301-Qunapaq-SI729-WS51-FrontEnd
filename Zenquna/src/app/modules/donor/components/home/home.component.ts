@@ -1,7 +1,7 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/app/environments/environment.prod';
-import { Campaign } from 'src/app/models/campaign.model';
+import { environment } from 'environments/environment.prod';
+import { Campaign } from 'src/app/core/models/campaign.model';
 import { Observable } from 'rxjs';
 
 interface Trend {
