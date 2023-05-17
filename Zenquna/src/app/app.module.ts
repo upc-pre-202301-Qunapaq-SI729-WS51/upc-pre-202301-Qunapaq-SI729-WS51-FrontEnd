@@ -28,6 +28,7 @@ import { PaymentComponent } from './components/dialogs/payment/payment.component
 import { VisaComponent } from './components/dialogs/visa/visa.component';
 import { HttpClientModule } from '@angular/common/http';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { CreateCampaignComponent } from './components/create-campaign/create-campaign.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     SidevarComponent,
     CampaignComponent,
     VisaComponent,
-    PaymentComponent
+    PaymentComponent,
+    CreateCampaignComponent
   ],
   imports: [
     BrowserModule,
