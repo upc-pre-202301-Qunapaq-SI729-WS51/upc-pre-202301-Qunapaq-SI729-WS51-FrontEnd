@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CreateCampaignComponent } from './components/create-campaign/create-campaign.component';
+import { CreateCampaignComponent } from './modules/create-campaign/components/create-campaign/create-campaign.component';
 import { NewsComponent } from '@shared/news/news.component';
 import { CampaignComponent } from '@shared/campaign/campaign.component';
 import { HomeComponent } from '@donor-components/home/home.component';

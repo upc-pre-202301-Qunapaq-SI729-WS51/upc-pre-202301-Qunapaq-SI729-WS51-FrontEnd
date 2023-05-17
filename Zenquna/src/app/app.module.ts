@@ -27,7 +27,7 @@ import { PaymentComponent } from '@donor-components/dialogs/payment/payment.comp
 import { VisaComponent } from '@donor-components/dialogs/visa/visa.component';
 import { HttpClientModule } from '@angular/common/http';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { CreateCampaignComponent } from './components/create-campaign/create-campaign.component';
+import { CreateCampaignComponent } from './modules/create-campaign/components/create-campaign/create-campaign.component';
 import { NewsComponent } from '@shared/news/news.component';
 
 @NgModule({
