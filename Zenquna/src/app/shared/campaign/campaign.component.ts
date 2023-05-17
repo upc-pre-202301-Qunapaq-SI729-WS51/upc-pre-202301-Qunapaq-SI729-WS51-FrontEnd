@@ -2,12 +2,12 @@ import { Component, Injectable, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/app/environments/environment.prod';
-import { Campaign } from 'src/app/models/campaign.model';
+import { environment } from '@environments/environment.prod';
+import { Campaign } from '@models/campaign.model';
 import {
   PaymentComponent,
   PaymentData,
-} from '../dialogs/payment/payment.component';
+} from '@donor-components/dialogs/payment/payment.component';
 
 @Component({
   selector: 'app-campaign',

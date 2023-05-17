@@ -9,10 +9,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NewsComponent } from './news/news.component';
 import {MatIconModule} from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from '@donor-components/home/home.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatRadioModule } from '@angular/material/radio';
@@ -20,15 +19,16 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
-import { CampaignComponent } from './components/campaign/campaign.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { HeaderComponent } from './components/header/header.component';
-import { SidevarComponent } from './components/sidevar/sidevar.component';
-import { PaymentComponent } from './components/dialogs/payment/payment.component';
-import { VisaComponent } from './components/dialogs/visa/visa.component';
+import { CampaignComponent } from './shared/campaign/campaign.component';
+import { FooterComponent } from '@shared/layout/footer/footer.component';
+import { HeaderComponent } from '@shared/layout/header/header.component';
+import { SidevarComponent } from '@donor-components/sidevar/sidevar.component';
+import { PaymentComponent } from '@donor-components/dialogs/payment/payment.component';
+import { VisaComponent } from '@donor-components/dialogs/visa/visa.component';
 import { HttpClientModule } from '@angular/common/http';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { CreateCampaignComponent } from './components/create-campaign/create-campaign.component';
+import { NewsComponent } from '@shared/news/news.component';
 
 @NgModule({
   declarations: [
