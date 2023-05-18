@@ -1,0 +1,52 @@
+<div class="main-container">
+  <div class="content-container">
+    <mat-card class="card-container">
+      <h1>Crear Campaña</h1>
+      <form class="form-container">
+        <mat-form-field class="full-width">
+          <mat-label>Nombre de la campaña</mat-label>
+          <textarea matInput placeholder=""></textarea>
+        </mat-form-field>
+
+        <h2>Seleccione los tipos de donaciones que desea recibir</h2>
+        <h2>Meta</h2>
+        <mat-form-field class="full-width">
+          <mat-label>Ingrese cantidad de coins</mat-label>
+          <textarea matInput placeholder=""></textarea>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <mat-label>Descripción de la campaña</mat-label>
+          <textarea matInput placeholder=""></textarea>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <mat-label
+            >Seleccione los tipos de donaciones que desea recibir</mat-label
+          >
+          <textarea matInput placeholder=""></textarea>
+        </mat-form-field>
+        <h2>Foto de campaña</h2>
+        <div class="img-container">
+          <div>
+            <img [src]="preview" class="preview">            
+          </div>
+          <div class="choose-files">
+            <input
+              class="ng-hide"
+              type="file"
+              id="fileInput"
+              accept="image/*"
+              (change)="selectFiles($event)"
+            />
+            <label class="labelButton" for="fileInput">Agregar</label>
+          </div>
+        </div>
+      </form>
+      <div class="containerButtons">
+        <button mat-button class="next-button" >
+          Siguiente
+        </button>
+      </div>
+    </mat-card>
+  </div>
+</div>
