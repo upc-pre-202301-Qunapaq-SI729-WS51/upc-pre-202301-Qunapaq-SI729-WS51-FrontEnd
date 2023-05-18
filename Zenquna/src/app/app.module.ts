@@ -28,9 +28,7 @@ import { SidevarComponent } from '@donor-components/sidevar/sidevar.component';
 import { PaymentComponent } from '@donor-components/dialogs/payment/payment.component';
 import { VisaComponent } from '@donor-components/dialogs/visa/visa.component';
 import { HttpClientModule } from '@angular/common/http';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { CreateCampaignComponent } from './modules/create-campaign/components/create-campaign/create-campaign.component';
-import { NewsComponent } from '@shared/news/news.component';
+import { CreateCampaignComponent } from '@create-campaign-components/create-campaign/create-campaign.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +41,7 @@ import { NewsComponent } from '@shared/news/news.component';
     CampaignComponent,
     VisaComponent,
     PaymentComponent,
+    CreateCampaignComponent,
   ],
   imports: [
     BrowserModule,
