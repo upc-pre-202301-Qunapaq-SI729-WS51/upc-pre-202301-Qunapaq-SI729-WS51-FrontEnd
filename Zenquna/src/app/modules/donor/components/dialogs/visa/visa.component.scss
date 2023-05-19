@@ -20,6 +20,16 @@
     width: 60%;
     margin-top: 20px;
   }
+  .pagar-button-disabled {
+    margin: auto;
+    display: block;
+    background-color: #456990;
+    font-weight: bold;
+    width: 60%;
+    margin-top: 20px;
+      opacity: 65%;
+      color: #000;
+  }
   .big-form {
     width: 45%;
     margin: 8 auto;

@@ -12,7 +12,7 @@ export interface PaymentData {
 })
 export class PaymentComponent {
   selectedMethod: string="";
-  methods: string[] = ['VISA', 'YAPE', 'PLIN'];
+  methods: string[] = ['TARJETA', 'YAPE'];
 
   constructor(
     public dialogRef: MatDialogRef<PaymentComponent>,
@@ -26,7 +26,7 @@ export class PaymentComponent {
 
   openMethod(): void {
     switch (this.selectedMethod) {
-      case 'VISA':
+      case 'TARJETA':
         const dialogRef = this.dialog.open(VisaComponent, {data: {donation: this.data.donation},});
         this.onExitClick();
         break;

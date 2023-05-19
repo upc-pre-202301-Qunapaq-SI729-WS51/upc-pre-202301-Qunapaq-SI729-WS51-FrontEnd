@@ -1,5 +1,5 @@
 <div mat-dialog-title class="title-text">
-    VISA
+    TARJETA
     <span class="example-spacer"></span>
     <button mat-button (click)="onExitClick()">
         <mat-icon class="icon">close</mat-icon>
@@ -13,36 +13,42 @@
     <form>
         <mat-form-field class="big-form">
           <mat-label>Numero de tarjeta</mat-label>
-          <input matInput [required]="true"/>
+          <input matInput [required]="true" type="number" [formControl]="numeroFormControl"/>
         </mat-form-field>
     </form>
     <form>
         <mat-form-field class="small-form">
             <mat-label>MM/AA</mat-label>
-            <input matInput [required]="true"/>
+            <input matInput [required]="true" type="month" [formControl]="requiredFormControl"/>
         </mat-form-field>
         <mat-form-field class="small-form">
             <mat-label>CVV</mat-label>
-            <input matInput [required]="true"/>
+            <input matInput [required]="true" type="number" [formControl]="cvvFormControl"/>
         </mat-form-field>
     </form>
     <form>
         <mat-form-field class="small-form">
             <mat-label>Nombre</mat-label>
-            <input matInput [required]="true"/>
+            <input matInput [required]="true" type="string" [formControl]="requiredFormControl"/>
         </mat-form-field>
         <mat-form-field class="small-form">
             <mat-label>Apellido</mat-label>
-            <input matInput [required]="true"/>
+            <input matInput [required]="true" type="string" [formControl]="requiredFormControl"/>
         </mat-form-field>
     </form>
     <form>
         <mat-form-field  class="big-form">
           <mat-label>Email</mat-label>
-          <input matInput [required]="true"/>
+          <input matInput [required]="true" type="email" [formControl]="emailFormControl"/>
         </mat-form-field>
     </form>
 </div>
 <div mat-dialog-actions>
-    <button mat-button (click)="onExitClick()" class="pagar-button">Donar {{data.donation}} PEN</button>
+    <!--disabled-->
+    <ng-container *ngIf="detectValidForm; else elseTemplate">
+        <button mat-button disabled class="pagar-button-disabled">Donar {{data.donation}} PEN</button>
+    </ng-container>
+    <ng-template #elseTemplate>
+        <button mat-button (click)="onExitClick()" class="pagar-button">Donar {{data.donation}} PEN</button>
+    </ng-template>
 </div>

@@ -18,9 +18,10 @@ import { MatListModule } from '@angular/material/list';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
+
 import { CampaignComponent } from './shared/campaign/campaign.component';
 import { FooterComponent } from '@shared/layout/footer/footer.component';
 import { HeaderComponent } from '@shared/layout/header/header.component';
@@ -61,6 +62,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatDialogModule,
     HttpClientModule,
     MatFormFieldModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
