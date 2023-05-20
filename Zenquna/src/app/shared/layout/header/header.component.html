@@ -8,7 +8,15 @@
         routerLink="/home"
         style="cursor: pointer"
       />
-      <a class="button_home" routerLink="/home" mat-button>Inicio</a>
+      <div class="breadcrumb-container">
+        <a [routerLink]="['/home']" class="breadcrumb-item">Inicio</a>
+        <ng-container *ngFor="let segment of breadcrumb; let last = last">
+          <span class="separator"> > </span>
+          <a [routerLink]="getRouterLink(segment)" class="breadcrumb-item">{{
+            segment
+          }}</a>
+        </ng-container>
+      </div>
     </div>
     <div class="toolbar-container">
       <mat-icon class="icon">search</mat-icon>

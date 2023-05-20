@@ -22,6 +22,39 @@
     border-radius: 50%;
   }
 
+  .breadcrumb-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    .breadcrumb-item {
+      margin-right: 5px;
+      // text-transform: uppercase;
+      color: #888;
+      font-weight: normal;
+      text-decoration: none;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        color: inherit;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    .separator {
+      //add a margin to separate to the right and left
+      font-weight: normal;
+      margin: 0 5px;
+      color: #888;
+    }
+  }
+
   .toolbar-container {
     display: flex;
     align-items: center;
