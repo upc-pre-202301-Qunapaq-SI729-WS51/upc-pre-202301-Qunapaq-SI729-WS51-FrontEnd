@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -8,27 +9,36 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class HeaderComponent {
   constructor(private router: Router) {}
-  breadcrumb: string[] = [];
+
+  breadcrumb: { label: string; url: string }[] = [];
+
   ngOnInit() {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => {
         this.generateBreadcrumb();
-      }
-    });
+      });
   }
 
   generateBreadcrumb() {
     this.breadcrumb = [];
 
     const urlSegments = this.router.url.split('/');
-    urlSegments.forEach((segment) => {
+    let url = '';
+
+    urlSegments.forEach((segment, index) => {
       if (segment !== '') {
-        this.breadcrumb.push(segment);
+        url += `/${segment}`;
+        if (index !== 1) {
+          // Excluir el primer segmento después de 'd' o 'o'
+          this.breadcrumb.push({ label: segment, url });
+        }
       }
     });
   }
 
-  getRouterLink(segment: string): string[] {
-    return [`/${segment}`];
+  getRouterLink(segment: string): string {
+    const index = this.breadcrumb.findIndex((bc) => bc.label === segment);
+    return this.breadcrumb[index]?.url;
   }
 }

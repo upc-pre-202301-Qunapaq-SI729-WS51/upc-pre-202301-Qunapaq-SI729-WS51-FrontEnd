@@ -1,12 +1,18 @@
 .page-container {
   display: flex;
   background-color: #f8f0fb;
+  height: auto;
 }
-
 .detail-container {
   flex: 1;
+  // padding: 20px;
+  height: 80vh;
+  background-color: #f8f0fb; /* Agrega el fondo de color al contenido */
 }
 
-.app-sidevar {
-  width: 200px;
+.app-sidebar {
+  width: 20%;
+  background-color: #fff;
+  border-right: 1px solid #ccc;
+  padding: 20px;
 }

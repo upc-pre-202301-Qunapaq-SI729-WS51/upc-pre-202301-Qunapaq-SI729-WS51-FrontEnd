@@ -9,12 +9,9 @@
         style="cursor: pointer"
       />
       <div class="breadcrumb-container">
-        <a [routerLink]="['/home']" class="breadcrumb-item">Inicio</a>
-        <ng-container *ngFor="let segment of breadcrumb; let last = last">
-          <span class="separator"> > </span>
-          <a [routerLink]="getRouterLink(segment)" class="breadcrumb-item">{{
-            segment
-          }}</a>
+        <ng-container *ngFor="let bc of breadcrumb; let isLast = last">
+          <a [routerLink]="bc.url" class="breadcrumb-item">{{ bc.label }}</a>
+          <span class="separator" *ngIf="!isLast"> > </span>
         </ng-container>
       </div>
     </div>

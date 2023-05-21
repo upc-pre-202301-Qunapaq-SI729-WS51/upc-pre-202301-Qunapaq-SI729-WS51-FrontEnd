@@ -16,8 +16,10 @@
         </p>
 
         <div class="progress-bar-container">
-          <mat-progress-bar mode="determinate" 
-          [value]="getDonationPercentage()"></mat-progress-bar>
+          <mat-progress-bar
+            mode="determinate"
+            [value]="getDonationPercentage()"
+          ></mat-progress-bar>
         </div>
         <p></p
       ></mat-card-content>
@@ -39,23 +41,32 @@
   </div>
   <!--Yey, tarjeta-->
   <mat-card class="donate-card-container">
-    <p class="title-text">Donar</p>
-    <!--<div class="donation-amount">{{ updateDonationText() }}</div>-->
-    <form class="form-container">
-      <div class="donation-buttons">
-        <button mat-raised-button (click)="donation = 5">5</button>
-        <button mat-raised-button (click)="donation = 10">10</button>
-        <button mat-raised-button (click)="donation = 15">15</button>
-        <button mat-raised-button (click)="donation = 20">20</button>
-      </div>
-      <mat-form-field>
-        <mat-label>Monto a donar</mat-label
-        ><input matInput [(ngModel)]="donation" min="5" type="number" value="{{donation}}"
-        (input)="updateDonationValue($event)" (click)="updateDonationValue($event)"/>
-      </mat-form-field>
-    </form>
-    <button mat-raised-button class="donate-button" (click)="openPayment()">
-      Donar {{donation}} PEN
-    </button>
+    <mat-card-content>
+      <p class="title-text">Donar</p>
+      <!--<div class="donation-amount">{{ updateDonationText() }}</div>-->
+      <form class="form-container">
+        <div class="donation-buttons">
+          <button mat-raised-button (click)="donation = 5">5</button>
+          <button mat-raised-button (click)="donation = 10">10</button>
+          <button mat-raised-button (click)="donation = 15">15</button>
+          <button mat-raised-button (click)="donation = 20">20</button>
+        </div>
+        <mat-form-field>
+          <mat-label>Monto a donar</mat-label
+          ><input
+            matInput
+            [(ngModel)]="donation"
+            min="5"
+            type="number"
+            value="{{ donation }}"
+            (input)="updateDonationValue($event)"
+            (click)="updateDonationValue($event)"
+          />
+        </mat-form-field>
+      </form>
+      <button mat-raised-button class="donate-button" (click)="openPayment()">
+        Donar {{ donation }} PEN
+      </button>
+    </mat-card-content>
   </mat-card>
 </div>
