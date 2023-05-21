@@ -1,0 +1,41 @@
+<div mat-dialog-title class="title-text">
+    YAPE
+    <span class="example-spacer"></span>
+    <button mat-button (click)="onExitClick()">
+        <mat-icon class="icon">close</mat-icon>
+    </button>
+</div>
+<mat-divider></mat-divider>
+<div mat-dialog-content class="subtitle-text">
+    Monto a donar: {{data.donation}} PEN
+</div>
+<div mat-dialog-content (input)="detectValidForm()" (click)="detectValidForm()">
+    <form>
+        <mat-form-field class="big-form">
+          <mat-label>Numero de telefono</mat-label>
+          <input matInput [required]="true" type="number" [formControl]="telefonoFormControl"/>
+        </mat-form-field>
+    </form>
+    <form>
+        <mat-form-field class="big-form">
+          <mat-label>Código de aprobación</mat-label>
+          <input matInput [required]="true" type="number" [formControl]="codigoFormControl"/>
+        </mat-form-field>
+    </form>
+    <div mat-dialog-content class="subtitle-text">
+        Encuentrelo en el menú de Yape
+    </div>
+</div>
+<div mat-dialog-actions>
+    <ng-container *ngIf="!isFormValid; else elseTemplate">
+        <button mat-button disabled class="pagar-button-disabled">
+            Yapear {{data.donation}} PEN
+        </button> &nbsp;
+    </ng-container>&nbsp;
+    <ng-template #elseTemplate>
+        <button mat-button (click)="registerDonation()" class="pagar-button">
+            Yapear {{data.donation}} PEN
+        </button> &nbsp;
+    </ng-template>
+</div>
+

@@ -9,7 +9,7 @@
 <div mat-dialog-content class="subtitle-text">
     Monto a donar: {{data.donation}} PEN
 </div>
-<div mat-dialog-content>
+<div mat-dialog-content (input)="detectValidForm()" (click)="detectValidForm()">
     <form>
         <mat-form-field class="big-form">
           <mat-label>Numero de tarjeta</mat-label>
@@ -19,7 +19,7 @@
     <form>
         <mat-form-field class="small-form">
             <mat-label>MM/AA</mat-label>
-            <input matInput [required]="true" type="month" [formControl]="requiredFormControl"/>
+            <input matInput [required]="true" type="month" [formControl]="expireFormControl"/>
         </mat-form-field>
         <mat-form-field class="small-form">
             <mat-label>CVV</mat-label>
@@ -29,11 +29,11 @@
     <form>
         <mat-form-field class="small-form">
             <mat-label>Nombre</mat-label>
-            <input matInput [required]="true" type="string" [formControl]="requiredFormControl"/>
+            <input matInput [required]="true" type="string" [formControl]="nameFormControl"/>
         </mat-form-field>
         <mat-form-field class="small-form">
             <mat-label>Apellido</mat-label>
-            <input matInput [required]="true" type="string" [formControl]="requiredFormControl"/>
+            <input matInput [required]="true" type="string" [formControl]="lastnameFormControl"/>
         </mat-form-field>
     </form>
     <form>
@@ -44,11 +44,15 @@
     </form>
 </div>
 <div mat-dialog-actions>
-    <!--disabled-->
-    <ng-container *ngIf="detectValidForm; else elseTemplate">
-        <button mat-button disabled class="pagar-button-disabled">Donar {{data.donation}} PEN</button>
-    </ng-container>
+    <ng-container *ngIf="!isFormValid; else elseTemplate">
+        <button mat-button disabled class="pagar-button-disabled">
+            Donar {{data.donation}} PEN
+        </button> &nbsp;
+    </ng-container>&nbsp;
     <ng-template #elseTemplate>
-        <button mat-button (click)="onExitClick()" class="pagar-button">Donar {{data.donation}} PEN</button>
+        <button mat-button (click)="registerDonation()" class="pagar-button">
+            Donar {{data.donation}} PEN
+        </button> &nbsp;
     </ng-template>
+    <!--<button mat-button (click)="registerDonation()" class="pagar-button">Donar {{data.donation}} PEN</button>-->
 </div>
