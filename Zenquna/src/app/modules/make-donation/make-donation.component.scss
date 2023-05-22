@@ -1,0 +1,26 @@
+.main-container{
+    margin: 10px;
+}
+.card-container{
+    padding: 15px;
+}
+.containerButtons{
+    display: flex;
+    justify-content: end;
+}
+.yapeimg{
+    max-width: 60px;
+}
+.row{
+    display: flex;
+    gap: 8px;
+    padding-top: 8px;
+}
+.textLabel{
+    font-size: 1.1rem;
+    margin: auto;
+    margin-left: 0;
+}
+.full-width{
+    width: 100%;
+}

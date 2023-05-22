@@ -4,6 +4,7 @@ import { CreateCampaignComponent } from './modules/create-campaign/components/cr
 import { NewsComponent } from '@shared/news/news.component';
 import { CampaignComponent } from '@shared/campaign/campaign.component';
 import { HomeComponent } from '@donor-components/home/home.component';
+import { MakeDonationComponent } from './modules/make-donation/make-donation.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'campaign', component: CampaignComponent },
   { path: 'campaign/:id', component: CampaignComponent },
   { path: 'createcampaign', component: CreateCampaignComponent },
+  { path: 'makedonation', component: MakeDonationComponent },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: '**', pathMatch: 'full', redirectTo: 'home' },
 ];
