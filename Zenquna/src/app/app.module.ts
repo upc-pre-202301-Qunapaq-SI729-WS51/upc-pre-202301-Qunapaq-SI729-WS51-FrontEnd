@@ -29,6 +29,7 @@ import { PaymentComponent } from '@donor-components/dialogs/payment/payment.comp
 import { VisaComponent } from '@donor-components/dialogs/visa/visa.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateCampaignComponent } from '@create-campaign-components/create-campaign/create-campaign.component';
+import { MakeDonationComponent } from './modules/make-donation/make-donation.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { CreateCampaignComponent } from '@create-campaign-components/create-camp
     VisaComponent,
     PaymentComponent,
     CreateCampaignComponent,
+    MakeDonationComponent,
   ],
   imports: [
     BrowserModule,
