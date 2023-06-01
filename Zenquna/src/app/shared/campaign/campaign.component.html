@@ -40,6 +40,13 @@
   <!--Yey, tarjeta-->
   <mat-card class="donate-card-container">
     <p class="title-text">Donar</p>
+    <div mat-dialog-actions class="form-container">
+        <mat-radio-group [(ngModel)]="selectedPlan">
+      <mat-radio-button class="radio-button main-text" *ngFor="let plan of plans" [value]="plan" color="primary">
+        {{plan}}
+      </mat-radio-button>
+    </mat-radio-group>
+    </div>
     <!--<div class="donation-amount">{{ updateDonationText() }}</div>-->
     <form class="form-container">
       <div class="donation-buttons">

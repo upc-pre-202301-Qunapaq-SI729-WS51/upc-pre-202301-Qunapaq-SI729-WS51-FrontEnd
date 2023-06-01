@@ -22,6 +22,8 @@ export class CampaignComponent implements OnInit {
   campaign: Campaign;
   donation: number;
   id:number;
+  plans: string[] = ['Una vez', 'Mensual'];
+  selectedPlan: string="";
   constructor(
     private http: HttpClient,
     public dialog: MatDialog,
@@ -82,7 +84,7 @@ export class CampaignComponent implements OnInit {
   }
 
   openPayment(): void {
-    if (this.donation>=5){
+    if (this.donation>=5 && this.selectedPlan!=""){
     const dialogRef = this.dialog.open(PaymentComponent, {
       data: { donation: this.donation , id: this.id},
     });
