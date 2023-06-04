@@ -39,12 +39,19 @@
 //   margin-top: 20px;
 // }
 
-.main-container {
+// Esto creo que causa el problema en el grid
+/*.main-container {
   display: flex;
   height: calc(100vh - 168px);
   // min-height: 900px;
   background-color: #f8f0fb;
   width: 100%;
+}*/
+.main-container {
+  display: flex;
+  height: calc(100%);
+  background-color: #f8f0fb;
+  padding: 40px 20px;
 }
 
 .content-container {
@@ -57,13 +64,13 @@
 }
 
 .trend-container {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 h2 {
   font-size: 24px;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .trend-slide {
@@ -119,7 +126,8 @@ mat-grid-tile {
 }
 
 .explore-container {
-  margin-bottom: 100px;
+  margin-bottom: -32px;
+  //^Uniendolo con el margin del campaign-card, el margin resultante es de 0
 }
 
 .campaign-card-container {
@@ -131,9 +139,10 @@ mat-grid-tile {
 
 .campaign-card {
   width: calc(30% - 30px); /* Cambiamos el ancho fijo a un porcentaje */
-  margin-bottom: 20px;
-  margin-left: 10px; /* Agregamos un margen a la izquierda */
-  margin-right: 10px; /* Agregamos un margen a la derecha */
+  margin-top: 32px;
+  margin-bottom: 32px;
+  margin-left: 8px; /* Agregamos un margen a la izquierda */
+  margin-right: 8px; /* Agregamos un margen a la derecha */
 }
 
 .campaign-card img {
