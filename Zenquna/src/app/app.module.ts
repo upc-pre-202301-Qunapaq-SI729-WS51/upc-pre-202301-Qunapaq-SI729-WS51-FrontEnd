@@ -29,6 +29,10 @@ import { VisaComponent } from './components/dialogs/visa/visa.component';
 import { HttpClientModule } from '@angular/common/http';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { CreateCampaignComponent } from './components/create-campaign/create-campaign.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { CreateAccountComponent } from './components/create-account/create-account.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { RetrieveAccountComponent } from './components/retrieve-account/retrieve-account.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,10 @@ import { CreateCampaignComponent } from './components/create-campaign/create-cam
     CampaignComponent,
     VisaComponent,
     PaymentComponent,
-    CreateCampaignComponent
+    CreateCampaignComponent,
+    SignInComponent,
+    CreateAccountComponent,
+    RetrieveAccountComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +69,8 @@ import { CreateCampaignComponent } from './components/create-campaign/create-cam
     FormsModule,
     MatDialogModule,
     HttpClientModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent],
