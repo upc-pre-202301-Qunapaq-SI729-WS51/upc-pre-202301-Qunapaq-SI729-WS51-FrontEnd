@@ -130,6 +130,36 @@ mat-grid-tile {
   //^Uniendolo con el margin del campaign-card, el margin resultante es de 0
 }
 
+.trend-card{
+  width: calc(90%); /* Cambiamos el ancho fijo a un porcentaje */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 8px; /* Agregamos un margen a la izquierda */
+  margin-right: 8px; /* Agregamos un margen a la derecha */
+  .trend-image-container{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    height: 15vw;
+    overflow: hidden;
+    .trend-image{
+      width: 100%;
+      margin-top: -10%;
+    }
+  }
+}
+
+.trend-card h3 {
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.trend-card p {
+  font-size: 14px;
+  margin: 10px 0;
+  margin-bottom: 12px;
+}
+
 .campaign-card-container {
   display: flex;
   flex-wrap: wrap;
