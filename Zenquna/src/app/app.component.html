@@ -1,9 +1,15 @@
-<app-header></app-header>
+<ng-container *ngIf="!isHiddenComponent"
+  ><app-header></app-header>
+</ng-container>
 <div class="page-container">
-  <app-sidevar></app-sidevar>
+  <ng-container *ngIf="!isHiddenComponent">
+    <app-sidevar></app-sidevar>
+  </ng-container>
   <div class="detail-container">
     <!-- <app-home></app-home> -->
     <router-outlet></router-outlet>
   </div>
 </div>
-<app-footer></app-footer>
+<div class="footer">
+  <app-footer></app-footer>
+</div>

@@ -1,39 +1,39 @@
-.main-container{
-    margin: 10px;
+.main-container {
+  margin: 10px;
 }
-.full-width{
-    width: 100%;
+.full-width {
+  width: 100%;
 }
-.card-container{
-    padding: 10px;
+.card-container {
+  padding: 10px;
 }
-.ng-hide{
-    display: none;
+.ng-hide {
+  display: none;
 }
-.choose-files{
-    cursor: pointer;
-    background-color: #63ceff;
-    width: 200px;
-    height: 20px;
-    text-align: center;
-    border: 1px solid black;
+.choose-files {
+  cursor: pointer;
+  background-color: #63ceff;
+  width: 200px;
+  height: 20px;
+  text-align: center;
+  border: 1px solid black;
 }
-.img-container{
-    display: flex;
-    gap: 8px;
+.img-container {
+  display: flex;
+  gap: 8px;
 }
-.labelButton{
-    width: 100%;
-    cursor: pointer;
+.labelButton {
+  width: 100%;
+  cursor: pointer;
 }
-.preview{
-    max-width: 400px;
-    max-height: 400px;
+.preview {
+  max-width: 400px;
+  max-height: 400px;
 }
-.next-button{
-    background-color: #63ceff;
+.next-button {
+  background-color: #63ceff;
 }
-.containerButtons{
-    display: flex;
-    justify-content: end;
+.containerButtons {
+  display: flex;
+  justify-content: end;
 }

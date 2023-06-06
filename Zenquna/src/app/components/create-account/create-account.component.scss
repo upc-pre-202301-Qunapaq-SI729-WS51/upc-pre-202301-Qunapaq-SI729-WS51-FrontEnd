@@ -1,19 +1,19 @@
 .create-account-button {
-    background-color: #0099AD;
-    color: #ffffff;
-    margin-bottom: 20px;
+  background-color: #0099ad;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
-.CreateAccount{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 1px;
+.CreateAccount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px; /* Cambié el valor para ajustar la posición hacia abajo */
+  margin-bottom: 0;
 }
 
-.example-margin{
-color:#0099AD;
-margin-bottom: 20px;
-
+.example-margin {
+  color: #0099ad;
+  margin-bottom: 20px;
 }

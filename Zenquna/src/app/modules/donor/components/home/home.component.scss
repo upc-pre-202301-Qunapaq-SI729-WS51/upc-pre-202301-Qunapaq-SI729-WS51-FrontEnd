@@ -49,19 +49,23 @@
 }*/
 .main-container {
   display: flex;
-  height: calc(100%);
+  min-height: 100vh; /* Cambiamos height a min-height */
   background-color: #f8f0fb;
   padding: 40px 20px;
+  box-sizing: border-box; /* Agregamos box-sizing */
 }
 
 .content-container {
   flex: 1;
   padding: 20px;
-  max-width: 100%; /* Ajustamos el ancho máximo */
-  max-height: 60%;
-  margin: 0 auto; /* Centramos horizontalmente */
+  max-width: 100%;
+  // max-height: 60vh; /* Cambiamos 60% a 60vh */
+  margin: 0 auto;
   box-sizing: border-box;
+  overflow: auto; /* Agregamos overflow:auto para habilitar el scroll interno */
 }
+
+/* Resto del código... */
 
 .trend-container {
   margin-bottom: 24px;
