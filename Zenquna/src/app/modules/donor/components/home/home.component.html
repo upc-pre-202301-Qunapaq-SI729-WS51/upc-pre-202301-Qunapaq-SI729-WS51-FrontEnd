@@ -2,7 +2,23 @@
   <div class="content-container">
     <div class="trend-container">
       <h2>Tendencia</h2>
-      <p>Carrousel Work in progress</p>
+      <mat-card class="trend-card">
+        <mat-card-content class="trend-image-container">
+          <img mat-card-image [src]="campaigns.at(1)?.imageBanner" 
+          [alt]="campaigns.at(0)?.name" class="trend-image"/>
+        </mat-card-content>
+        
+        <mat-card-content>
+          <h3 mat-card-title>{{ campaigns.at(1)?.name }}</h3>
+          <p mat-card-subtitle>{{ campaigns.at(1)?.summary }}</p>
+          <p mat-card-subtitle>{{ campaigns.at(1)?.description }}</p>
+          <button mat-raised-button color="accent"
+            routerLink="/campaign/{{ campaigns.at(1)?.id }}">
+            Ver ahora
+          </button>
+        </mat-card-content>
+      </mat-card>
+      <!--<p>Carrousel Work in progress</p>-->
     </div>
     <div class="explore-container">
       <h2>Más campañas</h2>
