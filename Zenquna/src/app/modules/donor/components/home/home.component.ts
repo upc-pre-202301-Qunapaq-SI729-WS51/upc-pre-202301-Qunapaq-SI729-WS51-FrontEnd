@@ -1,8 +1,7 @@
-import { Component, OnInit, Injectable } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'environments/environment.prod';
 import { Campaign } from 'src/app/core/models/campaign.model';
-import { Observable } from 'rxjs';
 
 interface Trend {
   title: string;
@@ -13,9 +12,6 @@ interface Trend {
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-})
-@Injectable({
-  providedIn: 'root',
 })
 export class HomeComponent implements OnInit {
   trends: Trend[] = [
@@ -53,7 +49,7 @@ export class HomeComponent implements OnInit {
     this.http.get<Campaign[]>(`${environment.apiUrl}/campaigns`).subscribe(
       (campaigns) => {
         this.campaigns = campaigns;
-        this.campaign1 = campaigns[3];
+        this.campaign1 = campaigns[0];
       },
       (error) => {
         console.error(error);
