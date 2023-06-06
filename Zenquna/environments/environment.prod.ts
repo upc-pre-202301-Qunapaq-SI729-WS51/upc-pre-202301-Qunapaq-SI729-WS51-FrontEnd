@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3000',
+  apiUrl: 'https://zenquna.uc.r.appspot.com/api/zq/v1',
 };

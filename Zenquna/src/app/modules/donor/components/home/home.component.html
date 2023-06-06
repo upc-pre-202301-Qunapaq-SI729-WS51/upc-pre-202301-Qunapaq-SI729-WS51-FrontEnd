@@ -4,16 +4,23 @@
       <h2>Tendencia</h2>
       <mat-card class="trend-card">
         <mat-card-content class="trend-image-container">
-          <img mat-card-image [src]="campaigns.at(1)?.imageBanner" 
-          [alt]="campaigns.at(0)?.name" class="trend-image"/>
+          <img
+            mat-card-image
+            [src]="campaigns.at(1)?.imageBanner"
+            [alt]="campaigns.at(0)?.name"
+            class="trend-image"
+          />
         </mat-card-content>
-        
+
         <mat-card-content>
           <h3 mat-card-title>{{ campaigns.at(1)?.name }}</h3>
           <p mat-card-subtitle>{{ campaigns.at(1)?.summary }}</p>
           <p mat-card-subtitle>{{ campaigns.at(1)?.description }}</p>
-          <button mat-raised-button color="accent"
-            routerLink="/campaign/{{ campaigns.at(1)?.id }}">
+          <button
+            mat-raised-button
+            color="accent"
+            routerLink="/campaign/{{ campaigns.at(1)?.id }}"
+          >
             Ver ahora
           </button>
         </mat-card-content>
@@ -31,7 +38,7 @@
           />
           <mat-card-content>
             <h3 mat-card-title>{{ campaign.name }}</h3>
-            <p mat-card-subtitle>{{ campaign.summary }}</p>
+            <p mat-card-subtitle>{{ campaign.description }}</p>
             <button
               mat-raised-button
               color="accent"
@@ -45,5 +52,3 @@
     </div>
   </div>
 </div>
-
-

@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
       imageUrl: 'assets/trend6.jpg',
     },
   ];
-
+  campaign1: Campaign | undefined;
   campaigns: Campaign[] = [];
 
   constructor(private http: HttpClient) {}
@@ -53,6 +53,7 @@ export class HomeComponent implements OnInit {
     this.http.get<Campaign[]>(`${environment.apiUrl}/campaigns`).subscribe(
       (campaigns) => {
         this.campaigns = campaigns;
+        this.campaign1 = campaigns[3];
       },
       (error) => {
         console.error(error);

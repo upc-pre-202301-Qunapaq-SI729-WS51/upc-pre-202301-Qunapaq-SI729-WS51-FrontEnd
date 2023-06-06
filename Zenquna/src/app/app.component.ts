@@ -14,17 +14,23 @@ export class AppComponent {
   constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit() {
-    this.http.get('http://localhost:3000/campaign').subscribe((data) => {
-      console.log('Campaigns:', data);
-    });
+    this.http
+      .get('https://zenquna.uc.r.appspot.com/api/zq/v1/campaigns')
+      .subscribe((data) => {
+        console.log('Campaigns:', data);
+      });
 
-    this.http.get('http://localhost:3000/news').subscribe((data) => {
-      console.log('News:', data);
-    });
+    this.http
+      .get('https://zenquna.uc.r.appspot.com/api/zq/v1/news')
+      .subscribe((data) => {
+        console.log('News:', data);
+      });
 
-    this.http.get('http://localhost:3000/comments').subscribe((data) => {
-      console.log('Comments:', data);
-    });
+    this.http
+      .get('https://zenquna.uc.r.appspot.com/api/zq/v1/comments')
+      .subscribe((data) => {
+        console.log('Comments:', data);
+      });
 
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
