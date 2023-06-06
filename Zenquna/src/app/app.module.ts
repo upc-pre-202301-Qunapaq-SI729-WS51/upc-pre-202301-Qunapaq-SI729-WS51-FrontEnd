@@ -32,6 +32,10 @@ import { YapeComponent } from './modules/donor/components/dialogs/yape/yape.comp
 import { CreateCampaignComponent } from '@create-campaign-components/create-campaign/create-campaign.component';
 import { MakeDonationComponent } from './modules/make-donation/make-donation.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { CreateAccountComponent } from './components/create-account/create-account.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { RetrieveAccountComponent } from './components/retrieve-account/retrieve-account.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +49,9 @@ import { HttpClientModule } from '@angular/common/http';
     VisaComponent,
     PaymentComponent,
     CreateCampaignComponent,
+    SignInComponent,
+    CreateAccountComponent,
+    RetrieveAccountComponent,
     MakeDonationComponent,
     YapeComponent,
   ],
@@ -68,6 +75,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatDialogModule,
     HttpClientModule,
     MatFormFieldModule,
+    MatCheckboxModule,
     ReactiveFormsModule,
   ],
   providers: [],

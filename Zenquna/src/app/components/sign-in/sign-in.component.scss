@@ -1,0 +1,30 @@
+.SignIn{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.password{
+    margin-top: -20px;
+    margin-bottom: -30px;
+}
+
+.password-lost{
+    margin-top: 1px;
+    margin-bottom: 20px;
+}
+.sign-in-button {
+    background-color: #0099AD;
+    color: #ffffff;
+    margin-bottom: 10px;
+    
+}
+
+.google-button{
+   margin-bottom: 10px;
+}
+.facebook-button{
+    margin-bottom: 10px;
+}
