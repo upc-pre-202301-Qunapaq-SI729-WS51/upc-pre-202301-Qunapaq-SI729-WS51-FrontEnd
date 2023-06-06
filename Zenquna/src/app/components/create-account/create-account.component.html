@@ -1,42 +1,43 @@
 <div class="CreateAccount">
-    <p>Cuenta Nueva</p>
-    
+    <p class="New account">Cuenta Nueva</p>
+    <div class="mat-form-field">
     <p>
-        <mat-form-field appearance="fill">
-          <mat-label>Ingresa tu nombre</mat-label>
-          <input matInput placeholder="">
+        <mat-form-field appearance="outline">
+          <mat-label>Nombres</mat-label>
+          <input matInput placeholder="Ingrese su nombre">
           <mat-icon matSuffix></mat-icon>
           <mat-hint></mat-hint>
         </mat-form-field>
       </p>
       <p>
         <mat-form-field appearance="outline">
-          <mat-label>Ingresa tu apellido</mat-label>
-          <input matInput placeholder="">
+          <mat-label>Apellidos</mat-label>
+          <input matInput placeholder="Ingrese su apellido">
           <mat-icon matSuffix></mat-icon>
           <mat-hint></mat-hint>
         </mat-form-field>
       </p>
-      <p>
-        <mat-form-field appearance="fill">
-          <mat-label>Ingresa tu DNI</mat-label>
-          <input matInput placeholder="">
+    </div>
+      <p class="DNI-Phone">
+        <mat-form-field appearance="outline">
+          <mat-label>DNI</mat-label>
+          <input matInput placeholder="Ingrese su DNI">
+          <mat-icon matSuffix></mat-icon>
+          <mat-hint></mat-hint>
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline">
+          <mat-label>Teléfono</mat-label>
+          <input matInput placeholder="Ingrese su teléfono">
           <mat-icon matSuffix></mat-icon>
           <mat-hint></mat-hint>
         </mat-form-field>
       </p>
+    <div class="mat-form-field">
       <p>
         <mat-form-field appearance="outline">
-          <mat-label>Ingresa tu teléfono</mat-label>
-          <input matInput placeholder="">
-          <mat-icon matSuffix></mat-icon>
-          <mat-hint></mat-hint>
-        </mat-form-field>
-      </p>
-      <p>
-        <mat-form-field appearance="fill">
-          <mat-label>Ingresa tu correo electrónico</mat-label>
-          <input matInput placeholder="">
+          <mat-label>Correo electrónico</mat-label>
+          <input matInput placeholder="Ingrese su correo electrónico">
           <mat-icon matSuffix></mat-icon>
           <mat-hint></mat-hint>
         </mat-form-field>
@@ -50,15 +51,15 @@
         </mat-form-field>
       </p>
       <p>
-        <mat-form-field appearance="fill">
-          <mat-label>Confirma tu contraseña</mat-label>
-          <input matInput placeholder="">
+        <mat-form-field appearance="outline">
+          <mat-label>Confirme su contraseña</mat-label>
+          <input matInput placeholder="Ingrese su contraseña nuevamente">
           <mat-icon matSuffix></mat-icon>
           <mat-hint></mat-hint>
         </mat-form-field>
       </p>
-     
-      <mat-checkbox class="example-margin">Acepto los términos y condiciones</mat-checkbox>
+    </div>
+      <mat-checkbox class="mat-checkbox">Acepto los términos y condiciones</mat-checkbox>
     
       <button mat-raised-button class="create-account-button" routerLink="sign-in">Crear cuenta</button>
       

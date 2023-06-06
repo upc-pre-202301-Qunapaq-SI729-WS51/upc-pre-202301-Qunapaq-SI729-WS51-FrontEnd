@@ -1,17 +1,17 @@
 <div class="SignIn">
-    <p>Inicia sesión</p>
+    <h1 class ="tittle">Inicia sesión</h1>
     <p>
-        <mat-form-field appearance="fill">
-          <mat-label>Ingrese su correo electrónico</mat-label>
-          <input matInput placeholder="example@hotmail.com">
+        <mat-form-field appearance="outline" class="mat-form-field">
+          <mat-label>Correo electrónico</mat-label>
+          <input matInput placeholder="Ingresa tu correo electrónico">
           <mat-icon matSuffix></mat-icon>
           <mat-hint></mat-hint>
         </mat-form-field>
       </p>
       <p>
-        <mat-form-field appearance="outline" class="password">
-          <mat-label>Ingrese su contraseña</mat-label>
-          <input matInput placeholder="********">
+        <mat-form-field appearance="outline" class="mat-form-field">
+          <mat-label>Contraseña</mat-label>
+          <input matInput placeholder="Ingresa tu contraseña">
           <mat-icon matSuffix></mat-icon>
           <mat-hint></mat-hint>
         </mat-form-field>
@@ -22,6 +22,6 @@
     <button mat-raised-button class="sign-in-button" routerLink="home">Iniciar sesión</button> 
     <button mat-raised-button class="google-button">Iniciar sesión con Google</button>
     <button mat-raised-button color="primary" class="facebook-button">Iniciar sesión con Facebook</button>
-    <p>¿Todavía no tienes cuenta? <a routerLink="/create-account">Crear una cuenta</a>
-    </p>
+    <p class="no account">¿Todavía no tienes cuenta? </p>
+    <a routerLink="/create-account" class="create-account">Crear una cuenta</a>
     </div>

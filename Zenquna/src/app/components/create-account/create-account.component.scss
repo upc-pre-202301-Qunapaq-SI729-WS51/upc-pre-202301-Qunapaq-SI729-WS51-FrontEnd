@@ -1,19 +1,54 @@
-.create-account-button {
-    background-color: #0099AD;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
+
 
 .CreateAccount{
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 1px;
+    margin-top: 100px;
+    
+}
+.New-account{
+    width: 300px;
 }
 
-.example-margin{
-color:#0099AD;
+.mat-form-field{
+    margin-top: -10px;
+    margin-bottom: -10px;
+    width: 300px;
+}
+
+.DNI-Phone{
+    width: 300px;
+}
+    
+
+
+
+.mat-checkbox{
+color:#63CEFF;
 margin-bottom: 20px;
+
+}
+.mat-checkbox-checked .mat-checkbox-background,
+.mat-checkbox-indeterminate .mat-checkbox-background {
+  background-color: #63CEFF;
+}
+
+.mat-checkbox-checked .mat-checkbox-ripple,
+.mat-checkbox-indeterminate .mat-checkbox-ripple {
+  background-color: #63CEFF; 
+}
+
+.mat-checkbox-checked .mat-checkbox-checkmark-path {
+    background-color: #63CEFF; 
+}
+
+.create-account-button {
+    background-color: #63CEFF;
+    color: #ffffff;
+    margin-bottom: 20px;
+    
+    
 
 }
