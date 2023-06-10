@@ -36,6 +36,7 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { CreateAccountComponent } from './components/create-account/create-account.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { RetrieveAccountComponent } from './components/retrieve-account/retrieve-account.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { RetrieveAccountComponent } from './components/retrieve-account/retrieve
     RetrieveAccountComponent,
     MakeDonationComponent,
     YapeComponent,
+    LandingPageComponent,
   ],
   imports: [
     BrowserModule,
