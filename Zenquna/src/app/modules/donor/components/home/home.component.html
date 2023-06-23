@@ -6,8 +6,8 @@
         <mat-card-content class="trend-image-container">
           <img
             mat-card-image
-            [src]="campaigns.at(1)?.imageBanner"
-            [alt]="campaigns.at(0)?.name"
+            [src]="campaign1?.headerImage"
+            [alt]="campaign1?.name"
             class="trend-image"
           />
         </mat-card-content>
@@ -33,7 +33,7 @@
         <mat-card class="campaign-card" *ngFor="let campaign of campaigns">
           <img
             mat-card-image
-            [src]="campaign.imageMini"
+            [src]="campaign.bodyImage"
             [alt]="campaign.name"
           />
           <mat-card-content>
