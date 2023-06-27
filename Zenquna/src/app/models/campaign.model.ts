@@ -5,19 +5,10 @@ export interface Campaign {
   description: string;
   goal: number;
   collected: number;
-  startDate: LocalDate;
-  endDate: LocalDate;
+  startDate: string; // Cambiado a string para simplificar
+  endDate: string; // Cambiado a string para simplificar
   status: string;
   headerImage: string;
   bodyImage: string;
-
-
-  category: Array<string>;
-  department: string;
-  district: string;
-  summary: string;
-  imageBanner: string;
-  imageMini: string;
-  donors: Array<string>;
-  deadline: string;
+  locations: Location[]; // Agregado para mantener la relación con las ubicaciones
 }

@@ -10,12 +10,12 @@
         <mat-card class="campaign-card" *ngFor="let campaign of campaigns">
           <img
             mat-card-image
-            [src]="campaign.imageMini"
+            [src]="campaign.headerImage"
             [alt]="campaign.name"
           />
           <mat-card-content>
             <h3 mat-card-title>{{ campaign.name }}</h3>
-            <p mat-card-subtitle>{{ campaign.summary }}</p>
+            <p mat-card-subtitle>{{ campaign.description }}</p>
             <button
               mat-raised-button
               color="accent"

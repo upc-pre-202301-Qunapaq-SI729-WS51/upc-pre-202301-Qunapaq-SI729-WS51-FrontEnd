@@ -27,18 +27,17 @@ export class CampaignComponent implements OnInit {
   ) {
     this.campaign = {
       id: 0,
-      category: [],
-      department: '',
-      district: '',
       name: '',
-      summary: '',
+      slogan: '',
       description: '',
-      imageBanner: '',
-      imageMini: '',
       goal: 0,
       collected: 0,
-      donors: [],
-      deadline: '',
+      startDate: '',
+      endDate: '',
+      status: '',
+      headerImage: '',
+      bodyImage: '',
+      locations: [],
     };
     this.donation = 0;
   }
