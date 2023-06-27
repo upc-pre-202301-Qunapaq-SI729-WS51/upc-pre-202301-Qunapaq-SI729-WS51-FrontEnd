@@ -74,8 +74,11 @@ img {
 }
 
 .donate-card-container {
-  width: 90%;
-  height: fit-content;//calc(25%);
+  position: sticky;
+  width: 40%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: fit-content; //calc(25%);
   margin-right: 2%;
   margin-bottom: 40px;
 
@@ -95,7 +98,7 @@ img {
     margin-bottom: 20px;
   }
   .radio-button {
-   margin: 10px;
+    margin: 10px;
   }
 }
 
@@ -111,7 +114,7 @@ img {
   outline: none;
   border: none;
   button {
-    margin:1%;
+    margin: 1%;
     color: white;
     font-weight: bold;
     background-color: #63ceff;

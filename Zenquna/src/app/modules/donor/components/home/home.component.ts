@@ -65,10 +65,10 @@ export class HomeComponent implements OnInit {
     const apiUrl = 'https://zenquna.uc.r.appspot.com/api/zq/v1/campaigns';
     const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
 
-    this.http.get<any[]>(apiUrl, { headers }).subscribe(
+    this.http.get<Campaign[]>(apiUrl, { headers }).subscribe(
       (campaigns) => {
-        this.campaigns = campaigns;
         this.campaign1 = campaigns[0];
+        this.campaigns = campaigns.slice(1); // empezamos la lista a partir de la segunda campaña
       },
       (error) => {
         console.error('Error fetching campaigns:', error);

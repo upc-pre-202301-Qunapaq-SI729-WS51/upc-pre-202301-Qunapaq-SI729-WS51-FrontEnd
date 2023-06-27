@@ -1,52 +1,3 @@
-// mat-toolbar {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// }
-
-// .logo {
-//   height: 50px;
-//   margin-left: 10px;
-// }
-
-// .toolbar-container {
-//   display: flex;
-//   align-items: center;
-// }
-
-// .icon {
-//   margin-right: 10px;
-//   cursor: pointer;
-// }
-
-// .avatar-container {
-//   margin-left: 20px;
-// }
-
-// .avatar {
-//   width: 40px;
-//   height: 40px;
-//   border-radius: 50%;
-//   cursor: pointer;
-// }
-
-// .premium-button {
-//   margin: auto;
-//   display: block;
-//   background-color: #63ceff;
-//   color: #fff;
-//   width: 80%;
-//   margin-top: 20px;
-// }
-
-// Esto creo que causa el problema en el grid
-/*.main-container {
-  display: flex;
-  height: calc(100vh - 168px);
-  // min-height: 900px;
-  background-color: #f8f0fb;
-  width: 100%;
-}*/
 .main-container {
   display: flex;
   min-height: 100vh; /* Cambiamos height a min-height */
@@ -133,17 +84,17 @@ mat-grid-tile {
   //^Uniendolo con el margin del campaign-card, el margin resultante es de 0
 }
 
-.trend-card{
+.trend-card {
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 8px; /* Agregamos un margen a la izquierda */
   margin-right: 8px; /* Agregamos un margen a la derecha */
-  .trend-image-container{
+  .trend-image-container {
     margin-top: 8px;
     margin-bottom: 8px;
     height: 15vw;
     overflow: hidden;
-    .trend-image{
+    .trend-image {
       width: 100%;
       margin-top: -10%;
     }
@@ -165,15 +116,18 @@ mat-grid-tile {
 .campaign-card-container {
   display: flex;
   gap: 8px;
-  margin: 0 10px; /* Agregamos un margen negativo a los lados */
+  margin: 0 10px;
+  flex-wrap: wrap; /* Permitir que las tarjetas se envuelvan a la siguiente línea si no hay suficiente espacio */
+  justify-content: space-between; /* Distribuir espacio uniformemente entre las tarjetas */
 }
 
 .campaign-card {
-  min-width: 30%;
+  width: 30%; /* En lugar de min-width */
   margin-top: 32px;
   margin-bottom: 32px;
   margin-left: 8px; /* Agregamos un margen a la izquierda */
   margin-right: 8px; /* Agregamos un margen a la derecha */
+  flex: 1; /* Asegurar que todas las tarjetas tengan el mismo tamaño, independientemente del contenido */
 }
 
 .campaign-card img {
@@ -206,29 +160,23 @@ mat-grid-tile {
 }
 
 @media (max-width: 1200px) {
-  // .explore-container {
-  //   flex-direction: column;
-  //   align-items: center;
-  // }
-
   .campaign-card {
-    // width: 100%; /* Ajustamos el ancho */
+    width: 100%; /* Las tarjetas ocuparán el ancho total */
+    height: auto; /* Altura auto para evitar que el texto se desborde */
     margin-bottom: 20px;
-    height: 360px; /* Ajustamos la altura */
-    width: calc(30% + 200px); /* Ajustamos el ancho */
+    flex: 1; /* Asegurar que todas las tarjetas tengan el mismo tamaño, independientemente del contenido */
   }
+
   .campaign-card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    // width: 100%;
+    flex-direction: column; /* Las tarjetas se organizan en una columna */
+    justify-content: space-around; /* Distribuir espacio uniformemente entre las tarjetas, incluyendo los bordes */
   }
-  .content-container {
-    padding: 0 0; /* Quitamos el padding horizontal */
-    //adjust the height when the screen is small
-    height: calc(100vh + 200px);
-  }
+
   .main-container {
-    height: calc(100vh + 360px);
+    height: auto; /* Permitir que el contenedor principal se ajuste a su contenido */
+  }
+
+  .content-container {
+    height: auto; /* Permitir que el contenedor de contenido se ajuste a su contenido */
   }
 }
