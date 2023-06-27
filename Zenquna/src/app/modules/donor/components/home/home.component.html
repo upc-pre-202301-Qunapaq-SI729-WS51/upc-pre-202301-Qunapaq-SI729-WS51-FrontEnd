@@ -13,13 +13,13 @@
         </mat-card-content>
 
         <mat-card-content>
-          <h3 mat-card-title>{{ campaigns.at(1)?.name }}</h3>
-          <p mat-card-subtitle>{{ campaigns.at(1)?.summary }}</p>
-          <p mat-card-subtitle>{{ campaigns.at(1)?.description }}</p>
+          <h3 mat-card-title>{{ campaigns.at(0)?.name }}</h3>
+          <p mat-card-subtitle>{{ campaigns.at(0)?.summary }}</p>
+          <p mat-card-subtitle>{{ campaigns.at(0)?.description }}</p>
           <button
             mat-raised-button
             color="accent"
-            routerLink="/campaign/{{ campaigns.at(1)?.id }}"
+            routerLink="/campaign/{{ campaigns.at(0)?.id }}"
           >
             Ver ahora
           </button>

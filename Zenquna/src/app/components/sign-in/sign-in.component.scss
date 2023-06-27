@@ -3,29 +3,43 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh; /* Ajustamos la altura al 100% del viewport */
+  height: 90vh;
+  padding: 20px; // Añade un poco de espacio alrededor del contenido
+  //background: #f0f0f0; // Añade un color de fondo suave
 }
 
 .password {
-  margin-top: 0; /* Eliminamos el margen superior */
-  margin-bottom: 10px; /* Ajustamos el margen inferior */
+  margin: 15px 0; // Aumenta el margen para un aspecto más espacioso
 }
 
 .password-lost {
-  margin-top: 10px; /* Ajustamos el margen superior */
-  margin-bottom: 20px;
+  margin: 10px 0 20px;
+  color: #0099ad;
+  text-decoration: underline;
+}
+
+button {
+  border-radius: 20px; // Hace que los botones sean más redondos
+  color: #ffffff;
+  padding: 10px 20px; // Añade más padding para un botón más grande
+  text-transform: uppercase; // Hace que el texto del botón sea todo en mayúsculas
+  font-size: 14px; // Reduce un poco el tamaño de fuente
+  margin-bottom: 15px; // Aumenta el margen entre botones
+  transition: 0.3s; // Añade una transición para el hover state
+
+  &:hover {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); // Añade un box-shadow en el hover
+  }
 }
 
 .sign-in-button {
-  background-color: #0099ad;
-  color: #ffffff;
-  margin-bottom: 10px;
+  background: linear-gradient(45deg, #0099ad, #007a8a);
 }
 
 .google-button {
-  margin-bottom: 10px;
+  background: linear-gradient(45deg, #4285f4, #2b5797);
 }
 
 .facebook-button {
-  margin-bottom: 10px;
+  background: linear-gradient(45deg, #3b5998, #29487d);
 }

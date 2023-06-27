@@ -12,12 +12,14 @@
           {{ campaign?.goal }} PEN
           <span class="example-spacer"></span>
           <mat-icon>person</mat-icon>
-          {{ campaign?.donors?.length }} donadores
+          <!-- {{ campaign?.donors?.length }} donadores -->
         </p>
 
         <div class="progress-bar-container">
-          <mat-progress-bar mode="determinate" 
-          [value]="getDonationPercentage()"></mat-progress-bar>
+          <mat-progress-bar
+            mode="determinate"
+            [value]="getDonationPercentage()"
+          ></mat-progress-bar>
         </div>
         <p></p
       ></mat-card-content>
@@ -28,7 +30,7 @@
         <p class="title-text">{{ campaign?.name }}</p>
         <p></p>
         <p class="main-text">
-          {{ campaign?.summary }}
+          {{ campaign?.slogan }}
         </p>
         <p class="normal-text">
           {{ campaign?.description }}
@@ -41,11 +43,16 @@
   <mat-card class="donate-card-container">
     <p class="title-text">Donar</p>
     <div mat-dialog-actions class="form-container">
-        <mat-radio-group [(ngModel)]="selectedPlan">
-      <mat-radio-button class="radio-button main-text" *ngFor="let plan of plans" [value]="plan" color="primary">
-        {{plan}}
-      </mat-radio-button>
-    </mat-radio-group>
+      <mat-radio-group [(ngModel)]="selectedPlan">
+        <mat-radio-button
+          class="radio-button main-text"
+          *ngFor="let plan of plans"
+          [value]="plan"
+          color="primary"
+        >
+          {{ plan }}
+        </mat-radio-button>
+      </mat-radio-group>
     </div>
     <!--<div class="donation-amount">{{ updateDonationText() }}</div>-->
     <form class="form-container">
@@ -57,12 +64,19 @@
       </div>
       <mat-form-field>
         <mat-label>Monto a donar</mat-label
-        ><input matInput [(ngModel)]="donation" min="5" type="number" value="{{donation}}"
-        (input)="updateDonationValue($event)" (click)="updateDonationValue($event)"/>
+        ><input
+          matInput
+          [(ngModel)]="donation"
+          min="5"
+          type="number"
+          value="{{ donation }}"
+          (input)="updateDonationValue($event)"
+          (click)="updateDonationValue($event)"
+        />
       </mat-form-field>
     </form>
     <button mat-raised-button class="donate-button" (click)="openPayment()">
-      Donar {{donation}} PEN
+      Donar {{ donation }} PEN
     </button>
   </mat-card>
 </div>

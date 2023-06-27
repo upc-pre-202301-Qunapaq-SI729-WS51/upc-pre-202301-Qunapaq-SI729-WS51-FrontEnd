@@ -1,6 +1,10 @@
+import { Donor } from './donor.model';
+import { Post } from './post.model';
+
 export interface Comment {
   id: number;
-  author: string;
-  message: string;
+  donor: Donor;
+  post: Post;
+  content: string;
   date: string;
 }

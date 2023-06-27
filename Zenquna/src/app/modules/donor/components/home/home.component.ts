@@ -62,7 +62,7 @@ export class HomeComponent implements OnInit {
   }
 
   fetchCampaigns() {
-    const apiUrl = 'https://zenquna.uc.r.appspot.com/api/zq/v1';
+    const apiUrl = 'https://zenquna.uc.r.appspot.com/api/zq/v1/campaigns';
     const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
 
     this.http.get<any[]>(apiUrl, { headers }).subscribe(

@@ -1,15 +1,18 @@
+import { Locations } from './location.model';
+import { Organization } from './organization.model';
+
 export interface Campaign {
   id: number;
-  category: Array<string>;
-  department: string;
-  district: string;
+  organization: Organization;
   name: string;
-  summary: string;
+  slogan?: string;
   description: string;
-  headerImage: string;
-  bodyImage: string;
   goal: number;
   collected: number;
-  donors: Array<string>;
-  deadline: string;
+  startDate: string;
+  endDate: string;
+  status: string;
+  headerImage: string;
+  bodyImage?: string;
+  locations: Locations[];
 }

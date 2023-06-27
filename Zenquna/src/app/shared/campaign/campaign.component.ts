@@ -4,11 +4,11 @@ import { MatDialog } from '@angular/material/dialog';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '@environments/environment.prod';
 import { Campaign } from '@models/campaign.model';
+import { Organization } from '@models/organization.model';
 import {
   PaymentComponent,
   PaymentData,
 } from '@donor-components/dialogs/payment/payment.component';
-
 
 @Component({
   selector: 'app-campaign',
@@ -21,9 +21,9 @@ import {
 export class CampaignComponent implements OnInit {
   campaign: Campaign;
   donation: number;
-  id:number;
+  id: number;
   plans: string[] = ['Una vez', 'Mensual'];
-  selectedPlan: string="";
+  selectedPlan: string = '';
   constructor(
     private http: HttpClient,
     public dialog: MatDialog,
@@ -31,28 +31,41 @@ export class CampaignComponent implements OnInit {
   ) {
     this.campaign = {
       id: 0,
-      category: [],
-      department: '',
-      district: '',
       name: '',
-      summary: '',
       description: '',
-      headerImage: '',
-      bodyImage: '',
       goal: 0,
       collected: 0,
-      donors: [],
-      deadline: '',
+      startDate: '',
+      endDate: '',
+      status: '',
+      headerImage: '',
+      bodyImage: '',
+      organization: {
+        id: 0,
+        name: '',
+        description: '',
+        RUC: '',
+        webPage: '',
+        logo: '',
+        user: {
+          id: 0,
+          username: '',
+          email: '',
+          password: '',
+          userType: '',
+        },
+      },
+      locations: [],
     };
     this.donation = 0;
-    this.id=0;
+    this.id = 0;
   }
 
   ngOnInit(): void {
     this.updateDonationText();
     this.route.params.subscribe((params) => {
       const id = params['id'];
-      this.id=params['id'];//esto es para pasarle el ID al dialog
+      this.id = params['id']; //esto es para pasarle el ID al dialog
       this.http
         .get<Campaign>(`${environment.apiUrl}/campaigns/${id}`)
         .subscribe(
@@ -70,8 +83,8 @@ export class CampaignComponent implements OnInit {
     this.updateDonationText();
   }
 
-  getDonationPercentage(){
-    return ((this.campaign.collected) / (this.campaign.goal))*100
+  getDonationPercentage() {
+    return (this.campaign.collected / this.campaign.goal) * 100;
     //(campaign?.collected / campaign?.goal) * 100
   }
 
@@ -84,10 +97,10 @@ export class CampaignComponent implements OnInit {
   }
 
   openPayment(): void {
-    if (this.donation>=5 && this.selectedPlan!=""){
-    const dialogRef = this.dialog.open(PaymentComponent, {
-      data: { donation: this.donation , id: this.id},
-    });
-  }
+    if (this.donation >= 5 && this.selectedPlan != '') {
+      const dialogRef = this.dialog.open(PaymentComponent, {
+        data: { donation: this.donation, id: this.id },
+      });
+    }
   }
 }
