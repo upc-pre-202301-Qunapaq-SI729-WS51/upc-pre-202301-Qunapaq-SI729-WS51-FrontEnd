@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'environments/environment.prod';
 import { Campaign } from 'src/app/core/models/campaign.model';
 
@@ -14,57 +14,33 @@ interface Trend {
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  trends: Trend[] = [
-    {
-      title: 'Tendencia 1',
-      imageUrl: 'assets/trend1.jpg',
-    },
-    {
-      title: 'Tendencia 2',
-      imageUrl: 'assets/trend2.jpg',
-    },
-    {
-      title: 'Tendencia 3',
-      imageUrl: 'assets/trend3.jpg',
-    },
-    {
-      title: 'Tendencia 4',
-      imageUrl: 'assets/trend4.jpg',
-    },
-    {
-      title: 'Tendencia 5',
-      imageUrl: 'assets/trend5.jpg',
-    },
-    {
-      title: 'Tendencia 6',
-      imageUrl: 'assets/trend6.jpg',
-    },
-  ];
-  campaign1: Campaign | undefined;
-  campaigns: Campaign[] = [];
+  campaigns!: any[];
 
   constructor(private http: HttpClient) {}
 
-  ngOnInit(): void {
-    this.http.get<Campaign[]>(`${environment.apiUrl}/campaigns`).subscribe(
-      (campaigns) => {
-        this.campaigns = campaigns;
-        this.campaign1 = campaigns[0];
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
+  //http options
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+    }),
+  };
+
+  ngOnInit() {
+    this.fetchCampaigns();
   }
 
-  onScroll(event: any) {
-    const scrollOffset = event.target.scrollLeft;
-    const visibleWidth = event.target.clientWidth;
-    const totalWidth = event.target.scrollWidth;
-    const lastTileWidth = totalWidth % (visibleWidth / 3);
+  fetchCampaigns() {
+    const apiUrl = 'https:localhost:8080/api/zq/v1/campaigns';
+    const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
 
-    if (scrollOffset > totalWidth - visibleWidth - lastTileWidth) {
-      event.target.scrollLeft = 0;
-    }
+    this.http.get<any[]>(apiUrl, { headers }).subscribe(
+      (campaigns) => {
+        this.campaigns = campaigns;
+      },
+      (error) => {
+        console.error('Error fetching campaigns:', error);
+      }
+    );
   }
 }

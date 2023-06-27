@@ -20,17 +20,15 @@ export class AppComponent {
         console.log('Campaigns:', data);
       });
 
-    this.http
-      .get('https://zenquna.uc.r.appspot.com/api/zq/v1/news')
-      .subscribe((data) => {
-        console.log('News:', data);
-      });
+    // this.http.get('https:localhost:8080/api/zq/v1/news').subscribe((data) => {
+    //   console.log('News:', data);
+    // });
 
-    this.http
-      .get('https://zenquna.uc.r.appspot.com/api/zq/v1/comments')
-      .subscribe((data) => {
-        console.log('Comments:', data);
-      });
+    // this.http
+    //   .get('https:localhost:8080/api/zq/v1/comments')
+    //   .subscribe((data) => {
+    //     console.log('Comments:', data);
+    //   });
 
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
