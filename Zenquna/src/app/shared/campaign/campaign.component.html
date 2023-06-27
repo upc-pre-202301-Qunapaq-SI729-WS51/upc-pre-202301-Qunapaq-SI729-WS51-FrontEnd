@@ -2,7 +2,7 @@
   <!--Header de la noticia-->
   <div class="content-container">
     <mat-card class="title-card-container">
-      <img [src]="campaign?.imageMini" [alt]="campaign.name" />
+      <img [src]="campaign?.bodyImage" [alt]="campaign.name" />
       <mat-card-content>
         <p class="title-text">{{ campaign?.name }}</p>
         <p></p>
@@ -34,7 +34,7 @@
           {{ campaign?.description }}
         </p>
       </mat-card-content>
-      <img [src]="campaign?.imageMini" [alt]="campaign.name" />
+      <img [src]="campaign?.bodyImage" [alt]="campaign.name" />
     </mat-card>
   </div>
   <!--Yey, tarjeta-->

@@ -6,8 +6,8 @@ export interface Campaign {
   name: string;
   summary: string;
   description: string;
-  imageBanner: string;
-  imageMini: string;
+  headerImage: string;
+  bodyImage: string;
   goal: number;
   collected: number;
   donors: Array<string>;

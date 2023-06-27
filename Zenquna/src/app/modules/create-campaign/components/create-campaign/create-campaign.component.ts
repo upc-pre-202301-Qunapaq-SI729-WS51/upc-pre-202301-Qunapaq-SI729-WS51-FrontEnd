@@ -18,7 +18,6 @@ export class CreateCampaignComponent {
 
       reader.onload = (e: any) => {
         console.log(e.target.result);
-        debugger;
         this.preview = e.target.result;
       };
       reader.readAsDataURL(this.selectedFiles[0]);

@@ -35,7 +35,7 @@ export class NewsComponent implements OnInit {
           ...post,
           avatar: this.campaigns.find(
             (campaign) => campaign.id === post.campaignId
-          )?.imageMini,
+          )?.bodyImage,
         }));
       });
 
