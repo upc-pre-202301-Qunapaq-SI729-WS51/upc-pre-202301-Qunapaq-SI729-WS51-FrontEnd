@@ -1,26 +1,30 @@
-import { Component,Inject } from '@angular/core';
-import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
+import { Component, Inject } from '@angular/core';
+import {
+  MatDialog,
+  MAT_DIALOG_DATA,
+  MatDialogRef,
+} from '@angular/material/dialog';
 import { VisaComponent } from '../visa/visa.component';
 import { YapeComponent } from '../yape/yape.component';
 
-export interface PaymentData {
+export interface visaData {
   donation: number;
-  id:number;
+  id: number;
 }
 @Component({
   selector: 'app-payment',
   templateUrl: './payment.component.html',
-  styleUrls: ['./payment.component.scss']
+  styleUrls: ['./payment.component.scss'],
 })
 export class PaymentComponent {
-  selectedMethod: string="";
+  selectedMethod: string = '';
   methods: string[] = ['TARJETA', 'YAPE'];
 
   constructor(
     public dialogRef: MatDialogRef<PaymentComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: PaymentData, public dialog: MatDialog
-  ) {  }
-  
+    @Inject(MAT_DIALOG_DATA) public data: visaData,
+    public dialog: MatDialog
+  ) {}
 
   onExitClick(): void {
     this.dialogRef.close();
@@ -29,11 +33,15 @@ export class PaymentComponent {
   openMethod(): void {
     switch (this.selectedMethod) {
       case 'TARJETA':
-        const dialogRef = this.dialog.open(VisaComponent, {data: {donation: this.data.donation, id:this.data.id},});
+        const dialogRef = this.dialog.open(VisaComponent, {
+          data: { donation: this.data.donation, id: this.data.id },
+        });
         this.onExitClick();
         break;
       default:
-        const dialogRef2 = this.dialog.open(YapeComponent, {data: {donation: this.data.donation, id:this.data.id},});
+        const dialogRef2 = this.dialog.open(YapeComponent, {
+          data: { donation: this.data.donation, id: this.data.id },
+        });
         this.onExitClick();
         break;
         break;

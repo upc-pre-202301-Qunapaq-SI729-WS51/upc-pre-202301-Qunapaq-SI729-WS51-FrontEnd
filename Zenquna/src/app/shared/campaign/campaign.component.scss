@@ -169,6 +169,10 @@ img {
   }
 
   .donate-card-container {
+    position: sticky;
+    width: 40%;
+    //top: 50%;
+    transform: none;
     order: 1;
     margin-right: 0;
     margin-bottom: 20px;

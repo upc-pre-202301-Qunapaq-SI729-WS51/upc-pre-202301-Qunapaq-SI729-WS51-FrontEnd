@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { DonorService, DONOR_SERVICE_PROVIDER } from '@services/Donor.service';
+
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -18,7 +20,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
@@ -34,7 +36,7 @@ import { MakeDonationComponent } from './modules/make-donation/make-donation.com
 import { HttpClientModule } from '@angular/common/http';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { CreateAccountComponent } from './components/create-account/create-account.component';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { RetrieveAccountComponent } from './components/retrieve-account/retrieve-account.component';
 
 @NgModule({
@@ -78,7 +80,7 @@ import { RetrieveAccountComponent } from './components/retrieve-account/retrieve
     MatCheckboxModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [DONOR_SERVICE_PROVIDER],
   bootstrap: [AppComponent],
   entryComponents: [PaymentComponent, VisaComponent],
 })

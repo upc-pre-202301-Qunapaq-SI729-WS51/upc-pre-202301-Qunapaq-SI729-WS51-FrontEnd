@@ -3,6 +3,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'environments/environment.prod';
 import { Campaign } from 'src/app/core/models/campaign.model';
 import { Observable } from 'rxjs';
+import { UserService } from '@services/User.service';
+import { DonorService } from '@services/Donor.service';
 
 interface Trend {
   title: string;
@@ -47,7 +49,11 @@ export class HomeComponent implements OnInit {
   campaign1: Campaign | undefined;
   campaigns!: any[];
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private userService: UserService,
+    private donorService: DonorService
+  ) {}
 
   //http options
   httpOptions = {
@@ -58,6 +64,12 @@ export class HomeComponent implements OnInit {
   };
 
   ngOnInit() {
+    //console.log(this.userService.getDonor().username);
+    //const username = this.userService.getDonor().username;
+    // console.log(this.donorService.getDonorByUsername(username));
+    // console.log(this.userService.getDonor());
+    //this.donorService.setDonorByUsername(this.userService.getDonor().username);
+    //console.log(this.donorService.getDonor());
     this.fetchCampaigns();
   }
 

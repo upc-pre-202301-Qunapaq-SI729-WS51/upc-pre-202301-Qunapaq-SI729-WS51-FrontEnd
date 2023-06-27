@@ -9,13 +9,10 @@ import { Campaign } from '@models/campaign.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 import { environment } from '@environments/environment.prod';
+import { UserService } from '@services/User.service';
 import { CommonModule } from '@angular/common';
 import { DatePipe } from '@angular/common';
-
-export interface PaymentData {
-  donation: number;
-  id: number;
-}
+import { PaymentData } from '@models/paymentData.model';
 
 @Component({
   selector: 'app-visa',
@@ -45,10 +42,12 @@ export class VisaComponent {
   ]);
 
   constructor(
+    private datePipe: DatePipe,
     public dialogRef: MatDialogRef<VisaComponent>,
     @Inject(MAT_DIALOG_DATA) public data: PaymentData,
     private http: HttpClient,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private userService: UserService
   ) {
     this.campaign = {
       id: 0,
@@ -104,15 +103,31 @@ export class VisaComponent {
       !this.cvvFormControl.hasError('max');
   }
   registerDonation(): void {
-    console.log(this.isFormValid);
-    console.log(this.data.id);
-    this.http
+    const donorUsed = this.userService.getDonor();
+    let expirationDate: Date | null = null;
+    if (this.expireFormControl.value) {
+      expirationDate = new Date(this.expireFormControl.value);
+    }
+    const formattedExpirationDate = expirationDate
+      ? this.datePipe.transform(expirationDate, 'yyyy-MM-dd')
+      : null;
+    const paymentData = {
+      donor: { id: donorUsed.id }, // Asegúrate de que este ID es el correcto
+      cardNumber: this.numeroFormControl.value,
+      expirationDate: formattedExpirationDate,
+      securityCode: this.cvvFormControl.value,
+      cardHolder:
+        this.nameFormControl.value + ' ' + this.lastnameFormControl.value,
+    };
+    //console.log(this.isFormValid);
+    //console.log(this.data.id);
+    /*this.http
       .get<Campaign>(`${environment.apiUrl}/campaigns/${this.data.id}`)
       .subscribe(
         (campaign) => {
           //obtiene la info de la campaña
           this.campaign = campaign;
-          console.log(this.campaign.collected);
+          //console.log(this.campaign.collected);
           //Añade la donación a la campaña
           campaign.collected = this.campaign.collected + this.data.donation;
           this.http.put<Campaign>(
@@ -121,13 +136,32 @@ export class VisaComponent {
             this.httpOptions
           );
           // no me funciona aaaaa
-          console.log(this.campaign.collected);
+          //console.log(this.campaign.collected);
         },
         (error) => {
           console.error(error);
         }
       );
     //cierra la tarjeta
+    */
+    //console.log(expirationDate);
+    //console.log(paymentData);
+    this.http
+      .post(
+        `${environment.apiUrl}/donor/${donorUsed.id}/paymentData`,
+        paymentData,
+        this.httpOptions
+      )
+      .subscribe(
+        (response) => {
+          //console.log('PaymentData created successfully', response);
+          // here you might close the dialog or notify user about success
+        },
+        (error) => {
+          //console.error('Failed to create PaymentData', error);
+          // here you might display error message to the user
+        }
+      );
     this.onExitClick();
   }
 }

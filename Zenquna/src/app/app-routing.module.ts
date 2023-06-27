@@ -16,11 +16,11 @@ const routes: Routes = [
   { path: 'campaign/:id', component: CampaignComponent },
   { path: 'createcampaign', component: CreateCampaignComponent },
   { path: 'makedonation', component: MakeDonationComponent },
-  {path: 'sign-in', component: SignInComponent},
-  {path:'create-account', component:CreateAccountComponent},
-  {path: 'retrieve-account', component:RetrieveAccountComponent},
-  { path: '', pathMatch: 'full', redirectTo: 'home' },
-  { path: '**', pathMatch: 'full', redirectTo: 'home' },
+  { path: 'sign-in', component: SignInComponent },
+  { path: 'create-account', component: CreateAccountComponent },
+  { path: 'retrieve-account', component: RetrieveAccountComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'sign-in' },
+  { path: '**', pathMatch: 'full', redirectTo: 'sign-in' },
 ];
 
 @NgModule({

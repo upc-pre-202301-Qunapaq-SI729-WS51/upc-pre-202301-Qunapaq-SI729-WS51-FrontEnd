@@ -1,27 +1,41 @@
 <div class="SignIn">
-    <p>Inicia sesión</p>
-    <p>
-        <mat-form-field appearance="fill">
-          <mat-label>Ingrese su correo electrónico</mat-label>
-          <input matInput placeholder="example@hotmail.com">
-          <mat-icon matSuffix></mat-icon>
-          <mat-hint></mat-hint>
-        </mat-form-field>
-      </p>
-      <p>
-        <mat-form-field appearance="outline" class="password">
-          <mat-label>Ingrese su contraseña</mat-label>
-          <input matInput placeholder="********">
-          <mat-icon matSuffix></mat-icon>
-          <mat-hint></mat-hint>
-        </mat-form-field>
-      </p>
-    
-      <a routerLink="/retrieve-account" class="password-lost">¿Olvidaste tu constraseña?</a>
-      
-    <button mat-raised-button class="sign-in-button" routerLink="home">Iniciar sesión</button> 
-    <button mat-raised-button class="google-button">Iniciar sesión con Google</button>
-    <button mat-raised-button color="primary" class="facebook-button">Iniciar sesión con Facebook</button>
-    <p>¿Todavía no tienes cuenta? <a routerLink="/create-account">Crear una cuenta</a>
-    </p>
-    </div>
+  <p>Inicia sesión</p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Ingrese su correo electrónico</mat-label>
+      <input matInput placeholder="example@hotmail.com" #emailInput />
+      <mat-icon matSuffix></mat-icon>
+      <mat-hint></mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline" class="password">
+      <mat-label>Ingrese su contraseña</mat-label>
+      <input matInput placeholder="********" #passwordInput type="password" />
+      <mat-icon matSuffix></mat-icon>
+      <mat-hint></mat-hint>
+    </mat-form-field>
+  </p>
+
+  <a routerLink="/retrieve-account" class="password-lost"
+    >¿Olvidaste tu constraseña?</a
+  >
+
+  <button
+    mat-raised-button
+    class="sign-in-button"
+    (click)="signIn(emailInput.value, passwordInput.value)"
+  >
+    Iniciar sesión
+  </button>
+  <button mat-raised-button class="google-button">
+    Iniciar sesión con Google
+  </button>
+  <button mat-raised-button color="primary" class="facebook-button">
+    Iniciar sesión con Facebook
+  </button>
+  <p>
+    ¿Todavía no tienes cuenta?
+    <a routerLink="/create-account">Crear una cuenta</a>
+  </p>
+</div>

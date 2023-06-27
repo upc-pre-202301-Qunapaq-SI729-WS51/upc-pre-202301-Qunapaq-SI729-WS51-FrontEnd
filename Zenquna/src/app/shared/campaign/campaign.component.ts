@@ -7,7 +7,7 @@ import { Campaign } from '@models/campaign.model';
 import { Organization } from '@models/organization.model';
 import {
   PaymentComponent,
-  PaymentData,
+  // PaymentData,
 } from '@donor-components/dialogs/payment/payment.component';
 
 @Component({
